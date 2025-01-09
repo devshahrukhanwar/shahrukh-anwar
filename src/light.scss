@@ -1,7 +1,10 @@
+$text-color: #000000;
 $bg-color: #ffffff;
+$in-bg-color: rgb(45 46 47);
 
 body {
     .light-theme {
+        color: $text-color;
         background-color: $bg-color;
     }
 }

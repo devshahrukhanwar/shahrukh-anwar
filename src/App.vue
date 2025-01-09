@@ -1,10 +1,14 @@
 <script setup>
-import Profile from './components/profile.vue'
+import Profile from '@/components/profile.vue'
 </script>
 
 <template>
-  <div class="dark-theme">
-    <Profile msg="Vite + Vue" />
+  <div class="container is-fluid p-6 dark-theme">
+    <div class="columns is-flex">
+      <div class="column"><Profile msg="Vite + Vue" /></div>
+      <div class="column"><Profile msg="Vite + Vue" /></div>
+      <div class="column"><Profile msg="Vite + Vue" /></div>
+    </div>
   </div>
 </template>
 

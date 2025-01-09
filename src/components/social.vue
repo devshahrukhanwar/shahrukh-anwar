@@ -1,18 +1,18 @@
 <template>
-  <div class="card social bg-white">
-    <div class="inline-flex">
-        <span class="icon">
-            <i class="fa fa-envelope"></i>
-        </span>
-        <span class="icon">
-            <i class="fa fa-github"></i>
-        </span>
-        <span class="icon">
-            <i class="fa fa-linkedin"></i>
-        </span>
-        <span class="icon">
-            <i class="fa fa-twitter"></i>
-        </span>
+  <div class="social p-3">
+    <div class="inline-flex is-size-5">
+      <span class="icon mx-2">
+        <i class="fa fa-envelope"></i>
+      </span>
+      <span class="icon mx-2">
+        <i class="fa fa-github"></i>
+      </span>
+      <span class="icon mx-2">
+        <i class="fa fa-twitter"></i>
+      </span>
+      <span class="icon mx-2">
+        <i class="fa fa-linkedin"></i>
+      </span>
     </div>
   </div>
 </template>
