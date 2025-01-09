@@ -1,0 +1,28 @@
+$bg-color: rgb(16, 17, 18);
+$button-color: rgb(145 78 238);
+
+:root {
+  background-color: $bg-color;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+
+  .icon {
+    i {
+      color: $button-color;
+    }
+  }
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}

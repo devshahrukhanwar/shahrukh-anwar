@@ -8,10 +8,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "bulma": "^1.0.3",
     "vue": "^3.2.45"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.0.0",
+    "font-awesome": "^4.7.0",
+    "sass": "^1.83.1",
     "vite": "^4.1.0"
   }
 }
