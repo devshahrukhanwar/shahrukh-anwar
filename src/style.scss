@@ -1,5 +1,4 @@
 $bg-color: rgb(16, 17, 18);
-$button-color: rgb(145 78 238);
 
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
 @import './light.scss';
@@ -18,11 +17,16 @@ body {
   font-family: "Outfit", "Outfit Placeholder", sans-serif;
 
   button {
-    color: $text-color;
     font-size: 15px;
     font-weight: 500;
     border-radius: 8px;
     padding: 10px 15px;
-    background-color: $button-color;
+  }
+
+  .icon {
+    img, svg {
+      height: 20px;
+      width: 20px;
+    }
   }
 }

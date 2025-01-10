@@ -10,12 +10,12 @@ const count = ref(0)
 </script>
 
 <template>
-  <div class="card container is-fluid p-6 profile">
-    <div class="info">
+  <div class="card profile container is-fluid p-6">
+    <div class="info mb-2">
       <div class="photo">
         <img src="@/assets/profile.avif" alt="profile-photo" />
       </div>
-      <div class="details">
+      <div class="details mt-3">
         <section class="name">Shahrukh Anwar</section>
         <section class="designation">Full Stack Developer</section>
         <section class="address">Allahabad, India</section>
@@ -23,7 +23,7 @@ const count = ref(0)
     </div>
     <Social />
     <button class="button">
-      Let's talk bussiness
+      Let's Talk
     </button>
   </div>
 </template>
@@ -32,7 +32,6 @@ const count = ref(0)
   @import '@/style.scss';
   .profile {
     border-radius: 16px;
-    background-color: $in-bg-color;
 
     .info {
       .photo {
@@ -50,6 +49,7 @@ const count = ref(0)
         }
 
         .designation, .address {
+          color: $text-color-grey;
           font-size: 18px;
           font-weight: 400;
           letter-spacing: 0em;
@@ -57,6 +57,7 @@ const count = ref(0)
       }
     }
     .button {
+      padding: 8px 50px;
       margin-top: 70px;
     }
   }

@@ -1,0 +1,26 @@
+{
+	"home": {
+		"title": "Home",
+		"icon": "home"
+	},
+	"projects": {
+		"title": "Projects",
+		"icon": ""
+	},
+	"tools": {
+		"title": "Tools",
+		"icon": ""
+	},
+	"experience": {
+		"title": "Experience",
+		"icon": ""
+	},
+	"thoughts": {
+		"title": "Thoughts",
+		"icon": ""
+	},
+	"contact": {
+		"title": "Contact",
+		"icon": ""
+	}
+}

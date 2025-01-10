@@ -1,0 +1,32 @@
+{
+    "email": {
+        "title": "Email",
+        "icon": "email",
+        "url": "shahrukhanwar2013@gmail.com"
+    },
+    "github": {
+        "title": "GitHub",
+        "icon": "github",
+        "url": "https://github.com/shahrukh4"
+    },
+    "twitter": {
+        "title": "Twitter",
+        "icon": "twitter",
+        "url": "https://twitter.com/shahrukhanwar58"
+    },
+    "stackoverflow": {
+        "title": "StackOverflow",
+        "icon": "stack-overflow",
+        "url": "https://stackoverflow.com/users/8473036/shahrukh-anwar"
+    },
+    "linkedin": {
+        "title": "Linkedin",
+        "icon": "linkedin",
+        "url": "https://medium.com/@shahrukhanwar2013"
+    },
+    "medium": {
+        "title": "Medium",
+        "icon": "medium",
+        "url": "https://medium.com/@shahrukhanwar2013"
+    }
+}
