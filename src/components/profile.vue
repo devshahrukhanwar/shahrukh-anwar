@@ -29,9 +29,9 @@ const count = ref(0)
 </template>
 
 <style lang="scss" scoped>
-  @import '@/style.scss';
   .profile {
     border-radius: 16px;
+    background-color: var(--card-bg-color);
 
     .info {
       .photo {
@@ -40,16 +40,17 @@ const count = ref(0)
         }
       }
       .details {
-        color: $text-color;
+        color: var(--text-color);
         letter-spacing: -0.01em;
 
         .name {
+          color: var(--text-color);
           font-size: 36px;
           font-weight: 700;
         }
 
         .designation, .address {
-          color: $text-color-grey;
+          color: var(--text-color-grey);
           font-size: 18px;
           font-weight: 400;
           letter-spacing: 0em;
@@ -59,6 +60,7 @@ const count = ref(0)
     .button {
       padding: 8px 50px;
       margin-top: 70px;
+      background-color: var(--button-color);
     }
   }
 </style>

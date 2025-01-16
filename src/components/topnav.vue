@@ -1,9 +1,6 @@
 <script setup>
 import menu from '@/config/nav.json'
 import Home from '@/components/icons/home.vue';
-
-import { defineComponent, ref } from 'vue';
-
 </script>
 
 <template>
@@ -23,9 +20,7 @@ import { defineComponent, ref } from 'vue';
 </template>
 
 <style lang="scss" scoped>
-	@import '@/style.scss';
 	.topnav {
-		background-color: $card-bg-color;
 		border-radius: 12px;
 	}
 </style>
