@@ -11,16 +11,18 @@ const setTheme = (isDarkTheme) => {
 </script>
 
 <template>
-  <!--  :class="isDarkMode ? 'dark-theme' : 'light-theme'" -->
-  <div class="container is-fluid p-6">
+  <div class="portfolio container is-fluid">
     <TopNav />
     <ThemeSwitch @is-dark="setTheme" />
-    <div class="columns is-flex">
+    <div class="columns is-flex-desktop is-block-mobile">
       <div class="column is-one-third"><Profile /></div>
-      <div class="column"><h2>Router View Here</h2></div>
+      <div class="column is-full-mobile"><router-view /></div>
     </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
+  .portfolio {
+    padding: 3rem 6rem;
+  }
 </style>

@@ -1,26 +1,32 @@
 {
 	"home": {
 		"title": "Home",
-		"icon": "home"
+		"icon": "home",
+		"path": "/"
 	},
 	"projects": {
 		"title": "Projects",
-		"icon": ""
+		"icon": "",
+		"path": "/"
 	},
 	"tools": {
 		"title": "Tools",
-		"icon": ""
+		"icon": "",
+		"path": "/"
 	},
 	"experience": {
 		"title": "Experience",
-		"icon": ""
+		"icon": "",
+		"path": "/"
 	},
 	"thoughts": {
 		"title": "Thoughts",
-		"icon": ""
+		"icon": "",
+		"path": "/"
 	},
 	"contact": {
 		"title": "Contact",
-		"icon": ""
+		"icon": "",
+		"path": "/"
 	}
 }

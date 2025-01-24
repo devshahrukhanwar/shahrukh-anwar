@@ -9,12 +9,14 @@ import Home from '@/components/icons/home.vue';
 			:key="item.title"
 			v-for="item in menu"
 		>
+		<router-link :to="item.path">
 			<span
 				class="icon is-clickable"
 				:title="item.title"
 			>
 				<Home />
 			</span>
+		</router-link>
 		</div>
   </nav>
 </template>

@@ -45,7 +45,7 @@ const count = ref(0)
 
         .name {
           color: var(--text-color);
-          font-size: 36px;
+          font-size: 32px;
           font-weight: 700;
         }
 

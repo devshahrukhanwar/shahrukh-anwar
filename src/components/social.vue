@@ -3,7 +3,7 @@ import socials from '@/config/socials.json'
 </script>
 
 <template>
-  <div class="social p-3">
+  <div class="social py-3">
     <div class="inline-flex is-size-5">
       <span class="icon is-clickable mx-2" v-for="social in socials" :key="social.icon">
         <img

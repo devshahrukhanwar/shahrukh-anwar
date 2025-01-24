@@ -5,9 +5,17 @@
 @use "bulma/sass/themes/setup" as setup;
 
 @mixin dark-theme {
+	// Backgrounds
 	--bg-color: #{var.$bg-grey};
+	--bg-white: #{var.$bg-white};
+	--bg-purple: #{var.$bg-purple};
+	--card-bg-color: #{var.$card-bg-grey};
+
+	// Texts
 	--text-color: #{var.$text-color};
 	--text-color-grey: #{var.$text-color-grey};
-	--card-bg-color: #{var.$card-bg-grey};
+	--text-highlight: #{var.$text-highlight};
+
+	// Buttons
 	--button-color: #{var.$button-dark};
 }
