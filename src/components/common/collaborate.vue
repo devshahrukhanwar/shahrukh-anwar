@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import Arrow from '@/components/icons/arrow.vue';
 
 </script>
 
@@ -15,7 +14,8 @@ import Arrow from '@/components/icons/arrow.vue';
 			Let’s collaborate to create user-centered solutions that not only meet your goals but also delight your users.
 		</p>
 		<div class="arrow">
-			<!-- <Arrow /> -->
+			<i class="fa-solid fa-arrow-up-long first"></i>
+			<i class="fa-solid fa-arrow-up-long second"></i>
 		</div>
 	</div>
 </template>
@@ -45,13 +45,26 @@ import Arrow from '@/components/icons/arrow.vue';
 			top: 8%;
 			right: 3%;
 			padding: 25px;
-			border-radius: 333px;
-			transform: rotate(-45deg);
+			display: inline-block;
+			border-radius: 30px;
 			background-color: var(--bg-purple);
 
-			img {
-				height: 40px;
-				width: 40px;
+			i {
+				top: 28%;
+				right: 31%;
+				font-size: 24px;
+				position: absolute;
+				transform: rotate(45deg);
+				transition: transform 0.3s ease, color 0.3s ease;
+
+				&.first {
+					transform: translateY(45deg);	
+				}
+				&.second {
+					transform: translateY(45deg);
+					opacity: 0;
+					transition: opacity 0.3s ease;
+				}
 			}
 		}
 
@@ -63,6 +76,17 @@ import Arrow from '@/components/icons/arrow.vue';
 			}
 			.arrow {
 				background-color: var(--bg-white);
+
+				i {
+					color: var(--text-highlight);
+
+					&.first {
+						opacity: 0;
+					}
+					&.second {
+						opacity: 1;
+					}
+				}
 			}
 		}
 	}

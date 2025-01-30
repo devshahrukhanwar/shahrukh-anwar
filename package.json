@@ -10,7 +10,6 @@
     "format:ci": "prettier src/ --check"
   },
   "dependencies": {
-    "@fortawesome/vue-fontawesome": "^3.0.8",
     "bulma": "^1.0.3",
     "vue": "^3.2.45",
     "vue-router": "^4.5.0"

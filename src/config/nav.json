@@ -1,32 +1,32 @@
 {
 	"home": {
 		"title": "Home",
-		"icon": "home",
+		"icon": "fa-sharp fa-solid fa-house",
 		"path": "/"
 	},
 	"projects": {
 		"title": "Projects",
-		"icon": "",
-		"path": "/"
+		"icon": "fa-regular fa-folder",
+		"path": "/projects"
 	},
 	"tools": {
 		"title": "Tools",
-		"icon": "",
-		"path": "/"
+		"icon": "fa-solid fa-wrench",
+		"path": "/tools"
 	},
 	"experience": {
 		"title": "Experience",
-		"icon": "",
-		"path": "/"
+		"icon": "fa-solid fa-briefcase",
+		"path": "/experience"
 	},
 	"thoughts": {
 		"title": "Thoughts",
-		"icon": "",
-		"path": "/"
+		"icon": "fa-regular fa-pen-to-square",
+		"path": "/thoughts"
 	},
 	"contact": {
 		"title": "Contact",
-		"icon": "",
-		"path": "/"
+		"icon": "fa-regular fa-envelope",
+		"path": "/contact"
 	}
 }

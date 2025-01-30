@@ -13,7 +13,7 @@ const setTheme = (isDarkTheme) => {
 <template>
   <div class="portfolio container is-fluid">
     <TopNav />
-    <ThemeSwitch @is-dark="setTheme" />
+    <ThemeSwitch @is-dark="setTheme" v-if="false"/>
     <div class="columns is-flex-desktop is-block-mobile">
       <div class="column is-one-third"><Profile /></div>
       <div class="column is-full-mobile"><router-view /></div>
