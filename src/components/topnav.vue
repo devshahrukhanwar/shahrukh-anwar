@@ -23,11 +23,20 @@ import menu from '@/config/nav.json'
 
 <style lang="scss" scoped>
 	.topnav {
+		top: 40px;
+		z-index: 9;
+		transform: translate(-50%);
+		position: absolute;
 		border-radius: 12px;
 
 		i {
 			color: var(--text-color);
 			font-size: var(--icon-size);
 		}
+
+		@media screen and (max-width: 768px) {
+      position: fixed;
+      transform: translate(-46%);
+    }
 	}
 </style>

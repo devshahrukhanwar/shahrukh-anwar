@@ -36,6 +36,8 @@ const count = ref(0)
     .info {
       .photo {
         img {
+          // width: 240px;
+          // height: 280px;
           border-radius: 16px;
         }
       }
