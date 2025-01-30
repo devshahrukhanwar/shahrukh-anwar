@@ -1,7 +1,7 @@
 {
 	"home": {
 		"title": "Home",
-		"icon": "fa-sharp fa-solid fa-house",
+		"icon": "fa-sharp fa-solid fa-house fa-thin-mimic",
 		"path": "/"
 	},
 	"projects": {
@@ -11,12 +11,12 @@
 	},
 	"tools": {
 		"title": "Tools",
-		"icon": "fa-solid fa-wrench",
+		"icon": "fa-solid fa-wrench fa-thin-mimic",
 		"path": "/tools"
 	},
 	"experience": {
 		"title": "Experience",
-		"icon": "fa-solid fa-briefcase",
+		"icon": "fa-solid fa-briefcase fa-thin-mimic",
 		"path": "/experience"
 	},
 	"thoughts": {

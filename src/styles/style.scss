@@ -27,6 +27,12 @@ body {
       height: 20px;
       width: 20px;
     }
+    i {
+      &.fa-thin-mimic {
+				color: transparent;
+				-webkit-text-stroke: 1px var(--icon-color);
+			}
+    }
     &:hover, &.is-active {
       transform: scale(1.0);
       background-color: var(--bg-purple);
