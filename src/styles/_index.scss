@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+@use 'bulma/sass/themes/setup' as setup;
+@use 'bulma/sass/utilities/css-variables' as cv;
+@use '@fortawesome/fontawesome-free/css/all.min.css';
+@use 'style';
+@use 'light';
+@use 'dark';
+
+:root {
+	@include dark.dark-theme;
+	@include setup.setup-theme;
+}
+
+@include cv.bulma-theme($name: 'light') {
+	@include light.light-theme;
+	@include setup.setup-theme;
+}
+
+@include cv.bulma-theme($name: 'dark') {
+	@include dark.dark-theme;
+	@include setup.setup-theme;
+}

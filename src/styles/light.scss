@@ -1,0 +1,13 @@
+@use 'sass:list';
+@use 'sass:meta';
+@use 'variables' as var;
+@use 'bulma/sass/utilities/css-variables' as cv;
+@use 'bulma/sass/themes/setup' as setup;
+
+@mixin light-theme {
+	--bg-color: #{var.$bg-white};
+	--text-color: #{var.$text-color};
+	--text-color-grey: #{var.$text-color-grey};
+	--card-bg-color: #{var.$card-bg-white};
+	--button-color: #{var.$button-light};
+}

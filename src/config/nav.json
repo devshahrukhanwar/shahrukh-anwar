@@ -1,0 +1,32 @@
+{
+	"home": {
+		"title": "Home",
+		"icon": "fa-sharp fa-solid fa-house fa-thin-mimic",
+		"path": "/"
+	},
+	"projects": {
+		"title": "Projects",
+		"icon": "fa-regular fa-folder",
+		"path": "/projects"
+	},
+	"tools": {
+		"title": "Tools",
+		"icon": "fa-solid fa-wrench fa-thin-mimic",
+		"path": "/tools"
+	},
+	"experience": {
+		"title": "Experience",
+		"icon": "fa-solid fa-briefcase fa-thin-mimic",
+		"path": "/experience"
+	},
+	"thoughts": {
+		"title": "Thoughts",
+		"icon": "fa-regular fa-pen-to-square",
+		"path": "/thoughts"
+	},
+	"contact": {
+		"title": "Contact",
+		"icon": "fa-regular fa-envelope",
+		"path": "/contact"
+	}
+}

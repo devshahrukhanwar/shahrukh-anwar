@@ -1,0 +1,18 @@
+{
+  "tabWidth": 2,
+  "useTabs": true,
+  "singleQuote": true,
+  "trailingComma": "none",
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true,
+  "importOrder": [
+    "<THIRD_PARTY_MODULES>",
+    "^@\/",
+    ".vue$",
+    ".scss$",
+    "^[./]"
+  ],
+  "plugins": [
+    "@trivago/prettier-plugin-sort-imports"
+  ]
+}
