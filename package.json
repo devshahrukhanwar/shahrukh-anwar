@@ -15,9 +15,9 @@
     "vue-router": "^4.5.0"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^6.7.2",
     "@trivago/prettier-plugin-sort-imports": "^5.2.1",
     "@vitejs/plugin-vue": "^4.0.0",
-    "font-awesome": "^4.7.0",
     "path": "^0.12.7",
     "prettier": "^3.4.2",
     "sass": "^1.83.4",

@@ -1,52 +1,92 @@
 @use 'bulma/css/bulma.min.css';
-@use "variables" as var;
+@use 'variables' as var;
+
+@font-face {
+	font-family: 'Inter';
+	src: url('../assets/fonts/Inter_18pt-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Inter';
+	src: url('../assets/fonts/Inter_24pt-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Inter';
+	src: url('../assets/fonts/Inter_28pt-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Outfit';
+	src: url('../assets/fonts/Outfit-Bold.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Outfit';
+	src: url('../assets/fonts/Outfit-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
 
 body {
-  margin: 0;
-  margin: 0 auto;
-  padding: 0;
-  text-align: center;
-  font-family: "Outfit", "Outfit Placeholder", sans-serif;
-  background-color: var(--bg-color);
-  color: var(--text-color);
+	margin: 0;
+	margin: 0 auto;
+	padding: 0;
+	text-align: center;
+	font-family: 'Outfit', 'Outfit Placeholder', sans-serif;
+	background-color: var(--bg-color);
+	color: var(--text-color);
 
-  button {
-    font-size: 15px;
-    font-weight: 500;
-    border-radius: 8px;
-    padding: 10px 15px;
-  }
+	button {
+		font-size: 15px;
+		font-weight: 500;
+		border-radius: 8px;
+		padding: 10px 15px;
+	}
 
-  .icon {
-    width: 35px;
-    height: 35px;
-    border-radius: 5px;
-    transition: background-color 0.5s ease, transform 0.5s ease;
+	.icon {
+		width: 35px;
+		height: 35px;
+		border-radius: 5px;
+		transition:
+			background-color 0.5s ease,
+			transform 0.5s ease;
 
-    img, svg {
-      height: 20px;
-      width: 20px;
-    }
-    i {
-      &.fa-thin-mimic {
+		img,
+		svg {
+			height: 20px;
+			width: 20px;
+		}
+		i {
+			&.fa-thin-mimic {
 				color: transparent;
 				-webkit-text-stroke: 1px var(--icon-color);
 			}
-    }
-    &:hover, &.is-active {
-      transform: scale(1.0);
-      background-color: var(--bg-purple);
-    }
-  }
+		}
+		&:hover,
+		&.is-active {
+			transform: scale(1);
+			background-color: var(--bg-purple);
+		}
+	}
 
-  .card, .navbar {
-    background-color: var(--card-bg-color);
-  }
+	.card,
+	.navbar {
+		background-color: var(--card-bg-color);
+	}
 
-  .text-highlight {
-    color: var(--text-highlight);
-  }
+	.text-highlight {
+		color: var(--text-highlight);
+	}
 
-  // Sizes
-  --icon-size: #{var.$icon-size};
+	// Sizes
+	--icon-size: #{var.$icon-size};
 }
