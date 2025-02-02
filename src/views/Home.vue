@@ -1,7 +1,16 @@
 <script setup lang="ts">
-import Collaborate from '@/components/common/collaborate.vue';
+import { Collaborate, FAQ } from '@/components';
 </script>
 
 <template>
-	<Collaborate />
+	<section>
+		<!-- FAQ Section Begins -->
+		<FAQ />
+	</section>
+	<!-- FAQ Section Ends -->
+	<section class="section-margin-top">
+		<!-- Collaborate Section Begins -->
+		<Collaborate />
+	</section>
+	<!-- Collaborate Section Ends -->
 </template>

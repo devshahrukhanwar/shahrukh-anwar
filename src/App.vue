@@ -25,7 +25,7 @@ defineExpose({ setTheme });
 			>
 				<Profile />
 			</div>
-			<div class="column is-full-mobile">
+			<div class="column view is-full-mobile">
 				<router-view />
 			</div>
 			<div
@@ -44,8 +44,17 @@ defineExpose({ setTheme });
 	position: relative;
 	padding: 7.5rem 6rem 3rem;
 
+	.view {
+		padding-left: 45px;
+	}
+
 	@media screen and (max-width: 768px) {
 		padding: 7.5rem 2rem 2rem;
+
+		.view {
+			padding-left: 0;
+			padding-right: 0;
+		}
 	}
 }
 </style>

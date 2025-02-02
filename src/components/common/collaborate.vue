@@ -5,7 +5,7 @@
 		<h2>
 			Let's
 			<br />
-			<span class="collab">collaborate</span>
+			<span class="text-highlight">collaborate</span>
 		</h2>
 		<p class="text py-2">
 			Unlock the potential of your product with expert design and development
@@ -25,18 +25,8 @@
 	position: relative;
 	letter-spacing: 0em;
 
-	h2 {
-		font-size: 58px;
-		font-weight: 500;
-		line-height: 1.2em;
-
-		.collab {
-			color: var(--text-highlight);
-		}
-	}
 	.text {
 		color: var(--text-color-grey);
-		font-size: 18px;
 		line-height: 1.2em;
 	}
 	.arrow {
@@ -72,7 +62,7 @@
 	&:hover {
 		background-color: var(--bg-purple);
 
-		.collab {
+		.text-highlight {
 			color: var(--text-color);
 		}
 		.arrow {
