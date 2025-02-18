@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import Collaborate from '@/components/common/collaborate.vue';
+import { Collaborate, FAQ } from '@/components';
 </script>
 
 <template>
-	<Collaborate />
+	
 </template>

@@ -5,6 +5,7 @@ import ThemeSwitch from '@/components/common/theme-switch.vue';
 import Profile from '@/components/profile.vue';
 import TopNav from '@/components/topnav.vue';
 import menu from '@/config/nav.json';
+import { Collaborate, FAQ } from '@/components';
 
 const isDarkMode = ref(true);
 const setTheme = (isDarkTheme: boolean): void => {
@@ -20,14 +21,26 @@ defineExpose({ setTheme });
 		<ThemeSwitch @is-dark="setTheme" v-if="false" />
 		<div class="columns is-flex-desktop is-block-mobile">
 			<div
-				class="column is-one-third"
+				class="column is-one-third profile-section"
 				:class="{ 'is-hidden-mobile': $route.path !== menu.home.path }"
 			>
 				<Profile />
 			</div>
-			<div class="column is-full-mobile">
-				<router-view />
-			</div>
+			<div class="column view is-full-mobile"> <!-- Common Section Begins -->
+				<div class="column p-0"><router-view /></div>
+				<div class="column p-0">
+					<section class="section-margin-top-30-mobile">
+						<!-- FAQ Section Begins -->
+						<FAQ />
+					</section>
+					<!-- FAQ Section Ends -->
+					<section class="section-margin-top-60 section-margin-top-90-mobile">
+						<!-- Collaborate Section Begins -->
+						<Collaborate />
+					</section>
+					<!-- Collaborate Section Ends -->
+				</div>
+			</div> <!-- Common Section Ends -->
 			<div
 				class="column is-one-third is-hidden-desktop"
 				:class="{ 'is-hidden-mobile': $route.path === menu.home.path }"
@@ -44,8 +57,25 @@ defineExpose({ setTheme });
 	position: relative;
 	padding: 7.5rem 6rem 3rem;
 
+	.profile-section {
+		top: 0;
+    height: fit-content;
+    position: sticky;
+	}
+	.view {
+		padding-left: 45px;
+	}
+
 	@media screen and (max-width: 768px) {
 		padding: 7.5rem 2rem 2rem;
+
+		.profile-section {
+			position: unset;
+		}
+		.view {
+			padding-left: 0;
+			padding-right: 0;
+		}
 	}
 }
 </style>

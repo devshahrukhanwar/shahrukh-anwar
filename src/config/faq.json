@@ -1,0 +1,22 @@
+[
+	{
+		"question": "What services do you offer?",
+		"answer": "I provide a range of services, including UI Designing, Web Development(Backend and Frontend), Technical consulting tailored to meet your project needs."
+	},
+	{
+		"question": "What is your technical process?",
+		"answer": "My technical process involves understanding client goals, conducting analysis, creating wireframes and prototypes, and iterating based on feedback to ensure the final product meets user needs with Agile practices."
+	},
+	{
+		"question": "How do you handle project timelines?",
+		"answer": "I work closely with clients to establish clear timelines and milestones with Agile practices, daily and weekly updates, ensuring that projects stay on track and are delivered on time and within budget."
+	},
+	{
+		"question": "Can you work with existing teams?",
+		"answer": "<b>Absolutely!</b> I can collaborate seamlessly with existing teams, integrating into your workflow to enhance design and development efforts."
+	},
+	{
+		"question": "What tools do you use?",
+		"answer": "I utilize various tools for design and development including <b>Figma, Zeplin, InVision, HTML, CSS, Vuejs, JavaScript, TypeScript</b> for frontend development and <b>Laravel, PHP, Python FastAPI</b>, etc for backend development with other necessary supporting tools (i.e. <b>Git, Docker, DBMS, AWS</b>, etc) for debugging and developing the features with continuous integration and delivery pipelines, ensuring high-quality outcomes for the projects."
+	}
+]

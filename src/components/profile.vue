@@ -19,7 +19,9 @@ const count = ref(0);
 			<div class="details mt-3">
 				<section class="name">Shahrukh Anwar</section>
 				<section class="designation">Full Stack Developer</section>
-				<section class="address">Allahabad, India</section>
+				<section class="address">
+					<a href="https://senecaglobal.com/" target="_blank" rel="noopener noreferrer">@SenecaGlobal, India</a>
+				</section>
 			</div>
 		</div>
 		<Social />
@@ -49,7 +51,7 @@ const count = ref(0);
 			}
 
 			.designation,
-			.address {
+			.address, a {
 				color: var(--text-color-grey);
 				font-size: 18px;
 				font-weight: 400;

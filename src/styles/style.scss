@@ -41,6 +41,7 @@ body {
 	margin: 0 auto;
 	padding: 0;
 	text-align: center;
+	font-size: #{var.$text-font-size};
 	font-family: 'Outfit', 'Outfit Placeholder', sans-serif;
 	background-color: var(--bg-color);
 	color: var(--text-color);
@@ -83,10 +84,32 @@ body {
 		background-color: var(--card-bg-color);
 	}
 
+	h2 {
+		font-size: #{var.$heading-size};
+		font-weight: 500;
+		line-height: 1.2em;
+	}
 	.text-highlight {
 		color: var(--text-highlight);
+	}
+	.section-margin {
+		&-top {
+			$margin-values: (30, 60, 90);
+			@each $value in $margin-values {
+				&-#{$value} {
+					margin-top: #{$value}px;
+
+					&-mobile {
+						@media screen and (max-width: 768px) {
+							margin-top: #{$value}px;
+						}
+					}
+				}
+			}
+		}
 	}
 
 	// Sizes
 	--icon-size: #{var.$icon-size};
+	--h2-mobile-size: #{var.$h2-mobile-size};
 }
