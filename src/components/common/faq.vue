@@ -35,7 +35,7 @@ const toggleSection = (index: number) => {
 				<div class="question column has-text-left pl-0 py-0">
 					{{ item.question }}
 				</div>
-				<div class="column has-text-right p-0 is-narrow">
+				<div class="column has-text-right p-0 is-narrow-mobile">
 					<i
 						:class="[
 							{
@@ -76,6 +76,12 @@ const toggleSection = (index: number) => {
 			&.is-active {
 				color: var(--text-highlight);
 			}
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		h2 {
+			font-size: var(--h2-mobile-size);
 		}
 	}
 }

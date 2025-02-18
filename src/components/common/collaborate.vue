@@ -85,6 +85,10 @@
 		h2 {
 			font-size: 38px;
 		}
+		.arrow {
+			top: 10%;
+			right: 6%;
+		}
 	}
 }
 </style>

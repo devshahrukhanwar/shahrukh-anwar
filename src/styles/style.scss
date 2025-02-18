@@ -94,11 +94,22 @@ body {
 	}
 	.section-margin {
 		&-top {
-			margin-top: #{var.$section-margin-top};
+			$margin-values: (30, 60, 90);
+			@each $value in $margin-values {
+				&-#{$value} {
+					margin-top: #{$value}px;
+
+					&-mobile {
+						@media screen and (max-width: 768px) {
+							margin-top: #{$value}px;
+						}
+					}
+				}
+			}
 		}
 	}
 
 	// Sizes
-	// --text-font-size: #{var.$text-font-size};
 	--icon-size: #{var.$icon-size};
+	--h2-mobile-size: #{var.$h2-mobile-size};
 }
