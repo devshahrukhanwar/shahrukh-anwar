@@ -30,6 +30,7 @@ const toggleSection = (index: number) => {
 			<!-- FAQ Section Begins -->
 			<div
 				class="column is-flex is-clickable p-0"
+				:class="{ 'is-open': isExpanded[index] }"
 				@click="toggleSection(index)"
 			>
 				<div class="question column has-text-left pl-0 py-0">
@@ -48,12 +49,14 @@ const toggleSection = (index: number) => {
 					</i>
 				</div>
 			</div>
-			<div
-				class="answer column has-text-left px-0 pb-0 pt-4"
-				v-if="isExpanded[index]"
-			>
-				{{ item.answer }}
-			</div>
+			<transition name="fade" mode="out-in" appear>
+				<div
+					class="answer column has-text-left px-0 pb-0 pt-4"
+					v-if="isExpanded[index]"
+					v-html="item.answer"
+				>
+				</div>
+			</transition>
 		</div>
 	</div>
 	<!-- FAQ Section Ends -->
