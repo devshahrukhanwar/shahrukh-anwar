@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
 
-import faq from '@/config/faq.json';
+import { faq } from '@/config';
 
 const isExpanded = ref<boolean[]>([]);
 

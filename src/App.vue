@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
 
 import ThemeSwitch from '@/components/common/theme-switch.vue';
 import Profile from '@/components/profile.vue';
@@ -26,15 +26,15 @@ defineExpose({ setTheme });
 			>
 				<Profile />
 			</div>
-			<div class="column view is-full-mobile"> <!-- Common Section Begins -->
+			<div class="column view is-full-mobile pb-5"> <!-- Common Section Begins -->
 				<div class="column p-0"><router-view /></div>
 				<div class="column p-0">
-					<section class="section-margin-top-30-mobile">
+					<section class="section-margin-top-60 section-margin-top-30-mobile">
 						<!-- FAQ Section Begins -->
 						<FAQ />
 					</section>
 					<!-- FAQ Section Ends -->
-					<section class="section-margin-top-60 section-margin-top-90-mobile">
+					<section class="section-margin-top-60 section-margin-top-90-mobile" v-if="$route.meta.showCollab">
 						<!-- Collaborate Section Begins -->
 						<Collaborate />
 					</section>
