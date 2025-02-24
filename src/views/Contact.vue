@@ -1,12 +1,14 @@
 <script setup lang="ts">
 import * as yup from 'yup';
+import { ref } from 'vue';
+import { useNotification } from '@/composables';
 import { Form, Field, ErrorMessage } from 'vee-validate';
+import { type Sender } from 'src/notifications';
 
-interface Form {
-  name: string
-  email: string
-  message: string
-}
+const { sendNotification } = useNotification();
+
+const btnText = ref('Send');
+const isSubmitting = ref(false);
 
 const schema = yup.object({
   name: yup.string().required('*Name is required'),
@@ -14,9 +16,25 @@ const schema = yup.object({
   message: yup.string().required('*Message is required')
 });
 
-const handleSubmit = (values: Form, { resetForm }) => {
-  console.log('Form submitted:', values);
-  resetForm()
+const handleSubmit = (sender: Sender, { resetForm }) => {
+  isSubmitting.value = true;
+
+  setTimeout(() => {
+    sendNotification(sender)
+      .then(() => {
+        resetForm()
+        isSubmitting.value = false;
+        btnText.value = 'Thank You';
+      })
+      .catch((error) => {
+        throw new Error(`Error sending email: ${error}`);
+      })
+      .finally(() => {
+        setTimeout(() => {
+          btnText.value = 'Send';
+        }, 200)
+      });
+  }, 500)
 };
 </script>
 
@@ -60,7 +78,7 @@ const handleSubmit = (values: Form, { resetForm }) => {
 				</div>
 				<div class="field">
 					<div class="control">
-						<button class="button is-fullwidth">Send</button>
+						<button class="button is-fullwidth" :class="{'is-loading': isSubmitting}">{{ btnText }}</button>
 					</div>
 				</div>
 			</Form>
