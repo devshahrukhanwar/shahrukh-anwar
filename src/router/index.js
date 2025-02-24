@@ -21,7 +21,8 @@ const routes = [
 			title: 'Contact',
 			showCollab: false
 		}
-	}
+	},
+	{ path: '/:pathMatch(.*)*', redirect: '/' } // Catch-all route to prevent 404s
 ];
 
 const router = createRouter({
