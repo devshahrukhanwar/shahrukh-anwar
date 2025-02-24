@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import { profile } from '@/config';
 
-import { Home, Contact } from '@/views';
+import { Home, Contact, Projects, Tools, Experience, Thoughts } from '@/views';
 
 const routes = [
 	{
@@ -10,6 +10,42 @@ const routes = [
 		component: Home,
 		meta: {
 			title: '',
+			showCollab: true
+		}
+	},
+	{
+		path: '/projects',
+		name: 'Projects',
+		component: Projects,
+		meta: {
+			title: 'Projects',
+			showCollab: true
+		}
+	},
+	{
+		path: '/tools',
+		name: 'Tools',
+		component: Tools,
+		meta: {
+			title: 'Tools',
+			showCollab: true
+		}
+	},
+	{
+		path: '/experience',
+		name: 'Experience',
+		component: Experience,
+		meta: {
+			title: 'Experience',
+			showCollab: true
+		}
+	},
+	{
+		path: '/thoughts',
+		name: 'Thoughts',
+		component: Thoughts,
+		meta: {
+			title: 'Thoughts',
 			showCollab: true
 		}
 	},
