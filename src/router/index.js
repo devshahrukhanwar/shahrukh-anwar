@@ -36,6 +36,7 @@ router.beforeEach((to, _, next) => {
     document.title = profile.name;
   }
 
+  window.scrollTo(0, 0);
   next();
 });
 
