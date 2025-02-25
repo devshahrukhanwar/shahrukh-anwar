@@ -1,13 +1,9 @@
 import axios from 'axios';
-import { createApp, h, VNode } from 'vue';
+import { getHTML } from '@/utils';
 import { EmailNotification } from '@/components';
-import type { NotificationSender, Sender } from './NotificationSender';
+import { type NotificationSender, type Sender, headers } from './NotificationSender';
 
-const url: string = import.meta.env.VITE_BREVO_BASE_URL;
-
-const headers: Record<string, string> = {
-  'Api-Key': import.meta.env.VITE_BREVO_API_KEY
-}
+const url: string = `${import.meta.env.VITE_BREVO_BASE_URL}/smtp/email`;
 
 const to: Array<Sender> = [
   {
@@ -29,27 +25,9 @@ export class EmailSender implements NotificationSender {
         to,
         sender: from,
         subject: `Portfolio | Contact Form Submission from ${sender.name}`,
-        htmlContent: this.getHTML(h(EmailNotification, { ...sender }))
+        htmlContent: getHTML(EmailNotification, sender)
       },
       { headers }
     );
-  }
-
-  getHTML(component: VNode): string {
-    const app = createApp({
-      render: () => component
-    });
-
-    // Create a temporary DOM element to mount the app
-    const tempContainer = document.createElement('div');
-    app.mount(tempContainer);
-
-    // Get the raw HTML string
-    const rawHtml = tempContainer.innerHTML;
-
-    // Clean up the app instance
-    app.unmount();
-
-    return rawHtml;
   }
 }

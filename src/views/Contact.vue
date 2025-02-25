@@ -3,7 +3,7 @@ import * as yup from 'yup';
 import { ref } from 'vue';
 import { useNotification } from '@/composables';
 import { Form, Field, ErrorMessage } from 'vee-validate';
-import { type Sender } from 'src/notifications';
+import { type Sender } from '@/notifications';
 
 const { sendNotification } = useNotification();
 
@@ -30,6 +30,7 @@ const handleSubmit = (sender: Sender, { resetForm: resetForm }: { resetForm: () 
         throw new Error(`Error sending email: ${error}`);
       })
       .finally(() => {
+        isSubmitting.value = false;
         setTimeout(() => {
           btnText.value = 'Send';
         }, 1000)

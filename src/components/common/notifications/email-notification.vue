@@ -8,7 +8,7 @@
 
 <script setup lang="ts">
 import { defineProps } from 'vue';
-import { Sender } from 'src/notifications';
+import { type Sender } from '@/notifications';
 
 const props = defineProps<Sender>();
 </script>

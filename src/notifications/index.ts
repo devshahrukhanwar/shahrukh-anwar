@@ -1,6 +1,6 @@
 import { Notification } from './Notification'
 import { EmailSender } from './EmailSender'
-import { WhatsAppSender } from './WhatsAppSender'
+import { TelegramSender } from './TelegramSender'
 import { NotificationSender, Sender } from './NotificationSender'
 
-export { Notification, EmailSender, WhatsAppSender, type NotificationSender, type Sender }
+export { Notification, EmailSender, TelegramSender, type NotificationSender, type Sender }

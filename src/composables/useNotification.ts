@@ -1,8 +1,8 @@
 import { ref } from "vue";
-import { Notification, EmailSender, WhatsAppSender, type Sender } from "@/notifications";
+import { Notification, EmailSender, TelegramSender, type Sender } from "@/notifications";
 
 export function useNotification() {
-  const notificationType = ref<"email" | "whatsapp">("email");
+  const notificationType = ref<"email" | "whatsapp">("whatsapp");
 
   function sendNotification(sender: Sender): Promise<void> {
     let notification;
@@ -10,7 +10,7 @@ export function useNotification() {
     if (notificationType.value === "email") {
       notification = new Notification(new EmailSender());
     } else {
-      notification = new Notification(new WhatsAppSender());
+      notification = new Notification(new TelegramSender());
     }
 
     return notification.send(sender);
