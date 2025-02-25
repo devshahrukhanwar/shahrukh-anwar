@@ -7,5 +7,5 @@ export interface Sender {
 }
 
 export interface NotificationSender {
-  sendMessage(sender: Sender): Promise<void>;
+  send(sender: Sender): Promise<void>;
 }

@@ -10,13 +10,9 @@
 import { defineProps } from 'vue';
 import { Sender } from 'src/notifications';
 
-const props = defineProps<{
-  name: string;
-  email: string;
-  message: string;
-}>();
+const props = defineProps<Sender>();
 </script>
 
 <style scoped>
 /* Add any styles here */
-</style>\]
+</style>

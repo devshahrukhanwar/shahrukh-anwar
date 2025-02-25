@@ -1,14 +1,17 @@
 {
   "files": [],
   "compilerOptions": {
-    "target": "es6",
-    "module": "commonjs",
-    "lib": ["es2015", "dom", "es2015.promise"],
+    "target": "ES2022",
+    "module": "ES2022",
+    "strict": true,
+    "jsx": "preserve",
+    "lib": ["es2015", "dom", "es2015.promise", "ES2022"],
     "allowJs": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "baseUrl": "./",
+    "forceConsistentCasingInFileNames": true
   },
   "include": [
     "src/**/*.ts",

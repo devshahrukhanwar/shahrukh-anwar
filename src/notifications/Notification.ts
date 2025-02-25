@@ -7,7 +7,7 @@ export class Notification {
     this.sender = sender;
   }
 
-  send(sender: Sender): void {
-    this.sender.sendMessage(sender);
+  send(sender: Sender): Promise<void> {
+    return this.sender.send(sender);
   }
 }

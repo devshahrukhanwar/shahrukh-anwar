@@ -1,11 +1,8 @@
 <script lang="ts" setup>
-import { ref, computed } from 'vue';
+import { ref } from 'vue';
 
-import ThemeSwitch from '@/components/common/theme-switch.vue';
-import Profile from '@/components/profile.vue';
-import TopNav from '@/components/topnav.vue';
 import menu from '@/config/nav.json';
-import { Collaborate, FAQ } from '@/components';
+import { Collaborate, FAQ, Profile, TopNavbar, ThemeSwitch } from '@/components';
 
 const isDarkMode = ref(true);
 const setTheme = (isDarkTheme: boolean): void => {
@@ -17,7 +14,7 @@ defineExpose({ setTheme });
 
 <template>
 	<div class="portfolio container is-fluid">
-		<TopNav />
+		<TopNavbar />
 		<ThemeSwitch @is-dark="setTheme" v-if="false" />
 		<div class="columns is-flex-desktop is-block-mobile">
 			<div

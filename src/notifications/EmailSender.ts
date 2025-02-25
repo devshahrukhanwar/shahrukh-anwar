@@ -16,14 +16,19 @@ const to: Array<Sender> = [
   }
 ]
 
+const from: Sender = {
+  name: import.meta.env.VITE_SENDER_NAME,
+  email: import.meta.env.VITE_SENDER_EMAIL
+}
+
 export class EmailSender implements NotificationSender {
-  async sendMessage(sender: Sender): Promise<void> {
+  async send(sender: Sender): Promise<void> {
     return await axios.post(
       url,
       {
         to,
-        sender,
-        subject: `New Contact Form Submission from ${sender.name}`,
+        sender: from,
+        subject: `Portfolio | Contact Form Submission from ${sender.name}`,
         htmlContent: this.getHTML(h(EmailNotification, { ...sender }))
       },
       { headers }

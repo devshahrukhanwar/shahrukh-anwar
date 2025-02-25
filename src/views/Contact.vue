@@ -16,7 +16,7 @@ const schema = yup.object({
   message: yup.string().required('*Message is required')
 });
 
-const handleSubmit = (sender: Sender, { resetForm }) => {
+const handleSubmit = (sender: Sender, { resetForm: resetForm }: { resetForm: () => void }) => {
   isSubmitting.value = true;
 
   setTimeout(() => {
@@ -26,13 +26,13 @@ const handleSubmit = (sender: Sender, { resetForm }) => {
         isSubmitting.value = false;
         btnText.value = 'Thank You';
       })
-      .catch((error) => {
+      .catch((error: Error) => {
         throw new Error(`Error sending email: ${error}`);
       })
       .finally(() => {
         setTimeout(() => {
           btnText.value = 'Send';
-        }, 200)
+        }, 1000)
       });
   }, 500)
 };
