@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
+import { profile } from '@/config';
 
 import Social from './social.vue';
 
@@ -17,15 +18,15 @@ const count = ref(0);
 				<img src="@/assets/profile.avif" alt="profile-photo" />
 			</div>
 			<div class="details mt-3">
-				<section class="name">Shahrukh Anwar</section>
-				<section class="designation">Full Stack Developer</section>
+				<section class="name">{{ profile.name }}</section>
+				<section class="designation">{{ profile.designation }}</section>
 				<section class="address">
-					<a href="https://senecaglobal.com/" target="_blank" rel="noopener noreferrer">@SenecaGlobal, India</a>
+					<a :href="profile.url" target="_blank" rel="noopener noreferrer">{{ profile.address }}</a>
 				</section>
 			</div>
 		</div>
 		<Social />
-		<button class="button">Let's Talk</button>
+		<button class="button" @click="$router.push({ name: 'Contact' })">Let's Talk</button>
 	</div>
 </template>
 

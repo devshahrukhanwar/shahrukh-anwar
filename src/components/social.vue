@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import socials from '@/config/socials.json';
+import { socials } from '@/config';
 </script>
 
 <template>

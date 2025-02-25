@@ -17,6 +17,6 @@
 	},
 	{
 		"question": "What tools do you use?",
-		"answer": "I utilize various tools for design and development including <b>Figma, Zeplin, InVision, HTML, CSS, Vuejs, JavaScript, TypeScript</b> for frontend development and <b>Laravel, PHP, Python FastAPI</b>, etc for backend development with other necessary supporting tools (i.e. <b>Git, Docker, DBMS, AWS</b>, etc) for debugging and developing the features with continuous integration and delivery pipelines, ensuring high-quality outcomes for the projects."
+		"answer": "I utilize various tools for design and development including <b>Figma, Zeplin, InVision, HTML, CSS, Vuejs, JavaScript, TypeScript</b> for frontend development and <b>Laravel, PHP, Python FastAPI</b>, etc for backend development.<br /><br />I use other necessary supporting tools (i.e. <b>Git, Docker, DBMS, AWS, Postman, VSCode, ChatGPT, GitHub Copilot</b>, etc) for debugging and developing the features with continuous integration and delivery pipelines, ensuring high-quality outcomes for the projects."
 	}
 ]

@@ -1,7 +1,10 @@
 <script setup lang="ts"></script>
 
 <template>
-	<div class="collaborate container card p-5 has-text-left is-clickable">
+	<div
+		class="collaborate container card p-5 has-text-left is-clickable"
+		@click="$router.push({ name: 'Contact' })"
+	>
 		<h2>
 			Let's
 			<br />

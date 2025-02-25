@@ -1,11 +1,8 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
 
-import ThemeSwitch from '@/components/common/theme-switch.vue';
-import Profile from '@/components/profile.vue';
-import TopNav from '@/components/topnav.vue';
 import menu from '@/config/nav.json';
-import { Collaborate, FAQ } from '@/components';
+import { Collaborate, FAQ, Profile, TopNavbar, ThemeSwitch } from '@/components';
 
 const isDarkMode = ref(true);
 const setTheme = (isDarkTheme: boolean): void => {
@@ -17,7 +14,7 @@ defineExpose({ setTheme });
 
 <template>
 	<div class="portfolio container is-fluid">
-		<TopNav />
+		<TopNavbar />
 		<ThemeSwitch @is-dark="setTheme" v-if="false" />
 		<div class="columns is-flex-desktop is-block-mobile">
 			<div
@@ -26,15 +23,15 @@ defineExpose({ setTheme });
 			>
 				<Profile />
 			</div>
-			<div class="column view is-full-mobile"> <!-- Common Section Begins -->
+			<div class="column view is-full-mobile pb-5"> <!-- Common Section Begins -->
 				<div class="column p-0"><router-view /></div>
 				<div class="column p-0">
-					<section class="section-margin-top-30-mobile">
+					<section class="section-margin-top-60 section-margin-top-30-mobile">
 						<!-- FAQ Section Begins -->
 						<FAQ />
 					</section>
 					<!-- FAQ Section Ends -->
-					<section class="section-margin-top-60 section-margin-top-90-mobile">
+					<section class="section-margin-top-60 section-margin-top-90-mobile" v-if="$route.meta.showCollab">
 						<!-- Collaborate Section Begins -->
 						<Collaborate />
 					</section>
