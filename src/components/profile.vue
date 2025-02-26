@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
+
 import { profile } from '@/config';
 
 import Social from './social.vue';
@@ -21,12 +22,16 @@ const count = ref(0);
 				<section class="name">{{ profile.name }}</section>
 				<section class="designation">{{ profile.designation }}</section>
 				<section class="address">
-					<a :href="profile.url" target="_blank" rel="noopener noreferrer">{{ profile.address }}</a>
+					<a :href="profile.url" target="_blank" rel="noopener noreferrer">{{
+						profile.address
+					}}</a>
 				</section>
 			</div>
 		</div>
 		<Social />
-		<button class="button" @click="$router.push({ name: 'Contact' })">Let's Talk</button>
+		<button class="button" @click="$router.push({ name: 'Contact' })">
+			Let's Talk
+		</button>
 	</div>
 </template>
 
@@ -52,7 +57,8 @@ const count = ref(0);
 			}
 
 			.designation,
-			.address, a {
+			.address,
+			a {
 				color: var(--text-color-grey);
 				font-size: 18px;
 				font-weight: 400;

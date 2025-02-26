@@ -54,8 +54,7 @@ const toggleSection = (index: number) => {
 					class="answer column has-text-left px-0 pb-0 pt-4"
 					v-if="isExpanded[index]"
 					v-html="item.answer"
-				>
-				</div>
+				></div>
 			</transition>
 		</div>
 	</div>

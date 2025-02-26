@@ -1,20 +1,40 @@
-import { ref } from "vue";
-import { Notification, EmailSender, TelegramSender, type Sender } from "@/notifications";
+import { getHTML, telegram } from '@/utils'
+import { ThankYou, EmailNotification } from '@/components'
+import { type Content } from "@/notifications/NotificationSender"
+import { Notification, EmailSender, TelegramSender, type Contact } from "@/notifications"
 
 export function useNotification() {
-  const notificationType = ref<"email" | "whatsapp">("whatsapp");
+  async function sendNotification(contact: Contact): Promise<void> {
+    const { TGContent, ThanksContent, ContactContent } = getContent(contact)
 
-  function sendNotification(sender: Sender): Promise<void> {
-    let notification;
+    const notifyEmail = new Notification(new EmailSender())
+    const notifyTG = new Notification(new TelegramSender())
+    const notifyThanks = new Notification((new EmailSender()).setTo([contact]))
 
-    if (notificationType.value === "email") {
-      notification = new Notification(new EmailSender());
-    } else {
-      notification = new Notification(new TelegramSender());
-    }
-
-    return notification.send(sender);
+    Promise.race([
+      notifyThanks.send(contact, ThanksContent),
+      notifyEmail.send(contact, ContactContent),
+      notifyTG.send(contact, TGContent)
+    ])
   }
 
-  return { notificationType, sendNotification };
+  function getContent(contact: Contact) {
+    const TGContent: Content = {
+      text: <string>telegram.contact(contact).trim()
+    }
+
+    const ThanksContent: Content = {
+      subject: <string>(`Thank you for contacting me, ${contact.name}`),
+      text: <string>getHTML(ThankYou, contact).trim()
+    }
+
+    const ContactContent: Content = {
+      subject: <string>(`Portfolio | Contact Form Submission from ${contact.name}`),
+      text: <string>getHTML(EmailNotification, contact).trim()
+    }
+
+    return { TGContent, ThanksContent, ContactContent }
+  }
+
+  return { sendNotification }
 }

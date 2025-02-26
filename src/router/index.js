@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import { profile } from '@/config';
 
-import { Home, Contact, Projects, Tools, Experience, Thoughts } from '@/views';
+import { profile } from '@/config';
+import { Contact, Experience, Home, Projects, Thoughts, Tools } from '@/views';
 
 const routes = [
 	{
@@ -67,14 +67,14 @@ const router = createRouter({
 });
 
 router.beforeEach((to, _, next) => {
-  if (to.meta && to.meta.title) {
-    document.title = `${profile.name} | ${to.name}`;
-  } else {
-    document.title = profile.name;
-  }
+	if (to.meta && to.meta.title) {
+		document.title = `${profile.name} | ${to.name}`;
+	} else {
+		document.title = profile.name;
+	}
 
-  window.scrollTo(0, 0);
-  next();
+	window.scrollTo(0, 0);
+	next();
 });
 
 export default router;
