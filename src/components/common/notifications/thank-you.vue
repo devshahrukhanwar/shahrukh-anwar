@@ -1,15 +1,15 @@
 <template>
 	<div>
-		<p>Hello, {{ profile.name }}!</p>
+		<p>Hello, {{ name }}!</p>
 		<p>
-			You've got a new contact form submission from {{ name }}. Reach out to
-			him/her to collaborate.
+			Thank you for contacting me. It's great to hear from you. I will get back
+			to you shortly.
 		</p>
-		<p><b>Email: </b>{{ email }}</p>
-		<p><b>Message: </b></p>
-		<p>
-			<i>"{{ message }}"</i>
-		</p>
+		<p>Let's connect and collaborate!</p>
+		<span>Have a great day!</span>
+		<br />
+		<p>Thanks & regards,</p>
+		<span>{{ profile.name }}</span>
 	</div>
 </template>
 

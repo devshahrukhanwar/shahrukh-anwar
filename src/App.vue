@@ -1,8 +1,14 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
 
+import {
+	Collaborate,
+	FAQ,
+	Profile,
+	ThemeSwitch,
+	TopNavbar
+} from '@/components';
 import menu from '@/config/nav.json';
-import { Collaborate, FAQ, Profile, TopNavbar, ThemeSwitch } from '@/components';
 
 const isDarkMode = ref(true);
 const setTheme = (isDarkTheme: boolean): void => {
@@ -23,7 +29,8 @@ defineExpose({ setTheme });
 			>
 				<Profile />
 			</div>
-			<div class="column view is-full-mobile pb-5"> <!-- Common Section Begins -->
+			<div class="column view is-full-mobile pb-5">
+				<!-- Common Section Begins -->
 				<div class="column p-0"><router-view /></div>
 				<div class="column p-0">
 					<section class="section-margin-top-60 section-margin-top-30-mobile">
@@ -31,13 +38,17 @@ defineExpose({ setTheme });
 						<FAQ />
 					</section>
 					<!-- FAQ Section Ends -->
-					<section class="section-margin-top-60 section-margin-top-90-mobile" v-if="$route.meta.showCollab">
+					<section
+						class="section-margin-top-60 section-margin-top-90-mobile"
+						v-if="$route.meta.showCollab"
+					>
 						<!-- Collaborate Section Begins -->
 						<Collaborate />
 					</section>
 					<!-- Collaborate Section Ends -->
 				</div>
-			</div> <!-- Common Section Ends -->
+			</div>
+			<!-- Common Section Ends -->
 			<div
 				class="column is-one-third is-hidden-desktop"
 				:class="{ 'is-hidden-mobile': $route.path === menu.home.path }"
@@ -56,8 +67,8 @@ defineExpose({ setTheme });
 
 	.profile-section {
 		top: 0;
-    height: fit-content;
-    position: sticky;
+		height: fit-content;
+		position: sticky;
 	}
 	.view {
 		padding-left: 45px;

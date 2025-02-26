@@ -1,13 +1,17 @@
-import type { NotificationSender, Sender } from './NotificationSender';
+import type {
+	Contact,
+	Content,
+	NotificationSender
+} from './NotificationSender';
 
 export class Notification {
-  private sender: NotificationSender;
+	private notification: NotificationSender;
 
-  constructor(sender: NotificationSender) {
-    this.sender = sender;
-  }
+	constructor(notification: NotificationSender) {
+		this.notification = notification;
+	}
 
-  send(sender: Sender): Promise<void> {
-    return this.sender.send(sender);
-  }
+	send(contact: Contact, content: Content): Promise<void> {
+		return this.notification.send(contact, content);
+	}
 }

@@ -1,55 +1,42 @@
 import axios from 'axios';
-import { createApp, h, VNode } from 'vue';
-import { EmailNotification } from '@/components';
-import type { NotificationSender, Sender } from './NotificationSender';
 
-const url: string = import.meta.env.VITE_BREVO_BASE_URL;
+import {
+	type Contact,
+	type Content,
+	type NotificationSender,
+	headers
+} from './NotificationSender';
 
-const headers: Record<string, string> = {
-  'Api-Key': import.meta.env.VITE_BREVO_API_KEY
-}
+const url: string = `${import.meta.env.VITE_BREVO_BASE_URL}/smtp/email`;
 
-const to: Array<Sender> = [
-  {
-    name: import.meta.env.VITE_RECEIVER_NAME,
-    email: import.meta.env.VITE_RECEIVER_EMAIL
-  }
-]
-
-const from: Sender = {
-  name: import.meta.env.VITE_SENDER_NAME,
-  email: import.meta.env.VITE_SENDER_EMAIL
-}
+const from: Contact = {
+	name: import.meta.env.VITE_SENDER_NAME,
+	email: import.meta.env.VITE_SENDER_EMAIL
+};
 
 export class EmailSender implements NotificationSender {
-  async send(sender: Sender): Promise<void> {
-    return await axios.post(
-      url,
-      {
-        to,
-        sender: from,
-        subject: `Portfolio | Contact Form Submission from ${sender.name}`,
-        htmlContent: this.getHTML(h(EmailNotification, { ...sender }))
-      },
-      { headers }
-    );
-  }
+	private to: Array<Contact> = [
+		{
+			name: import.meta.env.VITE_RECEIVER_NAME,
+			email: import.meta.env.VITE_RECEIVER_EMAIL
+		}
+	];
 
-  getHTML(component: VNode): string {
-    const app = createApp({
-      render: () => component
-    });
+	setTo(recipients: Array<Contact>): this {
+		this.to = recipients;
+		return this;
+	}
 
-    // Create a temporary DOM element to mount the app
-    const tempContainer = document.createElement('div');
-    app.mount(tempContainer);
-
-    // Get the raw HTML string
-    const rawHtml = tempContainer.innerHTML;
-
-    // Clean up the app instance
-    app.unmount();
-
-    return rawHtml;
-  }
+	async send(_: Contact, content: Content): Promise<void> {
+		return await axios.post(
+			url,
+			{
+				to: this.to,
+				sender: from,
+				subject: content.subject,
+				htmlContent: content.text
+			},
+			{ headers }
+		);
+	}
 }

@@ -1,3 +1,3 @@
-import { useNotification } from "./useNotification";
+import { useNotification } from './useNotification';
 
 export { useNotification };
