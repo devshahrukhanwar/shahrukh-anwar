@@ -1,3 +1,9 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { Introduction } from '@/components';
+</script>
 
-<template></template>
+<template>
+	<section>
+		<Introduction />
+	</section>
+</template>
