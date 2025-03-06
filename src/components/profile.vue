@@ -29,9 +29,11 @@ const count = ref(0);
 			</div>
 		</div>
 		<Social />
-		<button class="button" @click="$router.push({ name: 'Contact' })">
-			Let's Talk
-		</button>
+		<router-link :to="{ name: 'Contact' }">
+			<button class="button">
+				Let's Talk
+			</button>
+		</router-link>
 	</div>
 </template>
 
