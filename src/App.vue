@@ -29,7 +29,7 @@ defineExpose({ setTheme });
 			>
 				<Profile />
 			</div>
-			<div class="column view is-full-mobile pb-5">
+			<div class="column view is-full-mobile">
 				<!-- Common Section Begins -->
 				<div class="column p-0"><router-view /></div>
 				<div class="column p-0">
