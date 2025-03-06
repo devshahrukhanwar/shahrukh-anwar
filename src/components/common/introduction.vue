@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
 
-import { experience, profile } from '@/config';
+import { experience } from '@/config';
 
 const experienceYears = ref<number>(0);
 const year: number = new Date().getFullYear();
@@ -16,9 +16,9 @@ experienceYears.value = year - experience.joining;
 				Ideas into <span class="text-highlight">Reality</span>
 			</p>
 			<p class="description mt-2">
-				Passionate about creating intuitive and engaging user experiences.
+				Passionate about creating intuitive and engaging software experiences.
 				<br />
-				Specialize in transforming ideas into beautifully crafted products.
+				Specialized in transforming ideas into beautifully crafted products.
 			</p>
 			<div class="column is-inline-flex has-text-left p-0 mt-5 experience">
 				<div class="column is-uppercase p-0">
@@ -26,15 +26,31 @@ experienceYears.value = year - experience.joining;
 					<span>Years of experience</span>
 				</div>
 				<div class="column is-uppercase p-0">
-					<p class="text-bold">+46</p>
+					<p class="text-bold">+{{ experience.projects }}</p>
 					<span>Projects Completed</span>
 				</div>
 				<div class="column is-uppercase p-0">
-					<p class="text-bold">+20</p>
-					<span
-						>Worldwide <br />
+					<p class="text-bold">+{{ experience.client }}</p>
+					<span>Worldwide <br />
 						Clients</span
 					>
+				</div>
+			</div>
+			<div class="column is-flex pl-0 mt-5">
+				<div class="column is-narrow pl-0">
+					<router-link :to="{ name: 'Contact' }">
+						<button class="button">
+							Let's Talk
+						</button>
+					</router-link>
+				</div>
+				<div class="column is-narrow is-align-self-center work">
+					<router-link :to="{ name: 'Projects' }">
+						My Work
+						<span class="ml-2">
+							<i class="fa-solid fa-arrow-right-long"></i>
+						</span>
+					</router-link>
 				</div>
 			</div>
 		</div>
@@ -66,6 +82,27 @@ experienceYears.value = year - experience.joining;
 				font-size: 16px;
 			}
 		}
+	}
+	.work, a {
+		color: var(--text-color);
+		cursor: pointer;
+		font-size: var(--text-small-font-size);
+
+		i {
+			transform: scaleX(1.3);
+		}
+		&:hover {
+			i {
+				color: var(--text-highlight);
+				transform: scaleX(1.3) translateX(2px);
+				transition: transform 0.5s ease;
+			}
+		}
+	}
+	.button {
+		padding: 8px 50px;
+		font-size: var(--text-small-font-size);
+		background-color: var(--button-color);
 	}
 }
 </style>
