@@ -75,7 +75,7 @@ experienceYears.value = year - experience.joining;
 .introduction {
 	.heading {
 		font-size: 68px;
-		font-weight: 550;
+    font-weight: 550;
 		line-height: 1.1em;
 	}
 	.description {

@@ -87,6 +87,7 @@ body {
 	h2 {
 		font-size: #{var.$heading-size};
 		font-weight: 500;
+		text-shadow: 0.03em 0 0 currentColor;
 		line-height: 1.2em;
 	}
 	.text-highlight {
