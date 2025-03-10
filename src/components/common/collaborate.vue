@@ -6,7 +6,7 @@
 			class="collaborate container card p-5 has-text-left is-clickable"
 		>
 			<h2>
-				Let's
+				Let’s
 				<br />
 				<span class="text-highlight">collaborate</span>
 			</h2>
