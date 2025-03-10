@@ -31,7 +31,7 @@ defineExpose({ setTheme });
 			</div>
 			<div class="column view is-full-mobile">
 				<!-- Common Section Begins -->
-				<div class="column p-0"><router-view /></div>
+				<div class="column p-0 section-margin-top-30-mobile"><router-view /></div>
 				<div class="column p-0">
 					<section class="section-margin-top-60 section-margin-top-30-mobile">
 						<!-- FAQ Section Begins -->
