@@ -10,17 +10,31 @@ experienceYears.value = year - experience.joining;
 
 <template>
 	<div class="columns introduction">
-		<div class="column has-text-left">
+		<div class="column has-text-left has-text-centered-mobile">
 			<p class="heading">
-				Transforming Your <br />
-				Ideas into <span class="text-highlight">Reality</span>
+				<span class="is-hidden-mobile">
+					Transforming Your <br />
+					Ideas into <span class="text-highlight">Reality</span>
+				</span>
+				<span class="is-hidden-desktop">
+					Transforming <br /> Your Ideas <br /> into <span class="text-highlight">Reality</span>
+				</span>
 			</p>
 			<p class="description mt-2">
-				Passionate about creating intuitive and engaging software experiences.
-				<br />
-				Specialized in transforming ideas into beautifully crafted products.
+				<span class="is-hidden-mobile">
+					Passionate about creating intuitive and engaging software experiences.
+					<br />
+					Specialized in transforming ideas into beautifully crafted products.
+				</span>
+				<span class="is-hidden-desktop">
+					Passionate about creating intuitive and engaging
+					<br />
+					software experiences. Specialized in transforming ideas into
+					<br />
+					beautifully crafted products.
+				</span>
 			</p>
-			<div class="column is-inline-flex has-text-left p-0 mt-5 experience">
+			<div class="column is-inline-flex has-text-left p-0 mt-5 has-text-centered-mobile experience">
 				<div class="column is-uppercase p-0">
 					<p class="text-bold">+{{ experienceYears }}</p>
 					<span>Years of experience</span>
@@ -36,7 +50,7 @@ experienceYears.value = year - experience.joining;
 					>
 				</div>
 			</div>
-			<div class="column is-flex pl-0 mt-5">
+			<div class="column is-flex px-0 mt-5 has-text-cenetered-mobile">
 				<div class="column is-narrow pl-0">
 					<router-link :to="{ name: 'Contact' }">
 						<button class="button">
@@ -44,7 +58,7 @@ experienceYears.value = year - experience.joining;
 						</button>
 					</router-link>
 				</div>
-				<div class="column is-narrow is-align-self-center work">
+				<div class="column is-narrow is-5-mobile is-align-self-center has-text-centered-mobile work" v-if="0">
 					<router-link :to="{ name: 'Projects' }">
 						My Work
 						<span class="ml-2">
@@ -103,6 +117,15 @@ experienceYears.value = year - experience.joining;
 		padding: 8px 50px;
 		font-size: var(--text-small-font-size);
 		background-color: var(--button-color);
+	}
+
+	@media screen and (max-width: 768px) {
+		.heading, {
+			font-size: 48px;
+		}
+		.experience div .text-bold {
+			font-size: 50px;
+		}
 	}
 }
 </style>
