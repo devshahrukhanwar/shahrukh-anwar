@@ -1,25 +1,26 @@
 <script setup lang="ts"></script>
 
 <template>
-	<div
-		class="collaborate container card p-5 has-text-left is-clickable"
-		@click="$router.push({ name: 'Contact' })"
-	>
-		<h2>
-			Let's
-			<br />
-			<span class="text-highlight">collaborate</span>
-		</h2>
-		<p class="text py-2">
-			Unlock the potential of your product with expert design and development
-			services. Let’s collaborate to create user-centered solutions that not
-			only meet your goals but also delight your users.
-		</p>
-		<div class="arrow">
-			<i class="fa-solid fa-arrow-up-long first"></i>
-			<i class="fa-solid fa-arrow-up-long second"></i>
+	<router-link :to="{ name: 'Contact' }">
+		<div
+			class="collaborate container card p-5 has-text-left is-clickable"
+		>
+			<h2>
+				Let’s
+				<br />
+				<span class="text-highlight">collaborate</span>
+			</h2>
+			<p class="text py-2">
+				Unlock the potential of your product with expert design and development
+				services. Let’s collaborate to create user-centered solutions that not
+				only meet your goals but also delight your users.
+			</p>
+			<div class="arrow">
+				<i class="fa-solid fa-arrow-up-long first"></i>
+				<i class="fa-solid fa-arrow-up-long second"></i>
+			</div>
 		</div>
-	</div>
+	</router-link>
 </template>
 
 <style lang="scss" scoped>

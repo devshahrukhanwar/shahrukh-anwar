@@ -1,6 +1,7 @@
 // Common
 import Collaborate from './common/collaborate.vue';
 import FAQ from './common/faq.vue';
+import Introduction from './common/introduction.vue';
 import EmailNotification from './common/notifications/email-notification.vue';
 // Notifications
 import ThankYou from './common/notifications/thank-you.vue';
@@ -18,5 +19,6 @@ export {
 	TopNavbar,
 	ThemeSwitch,
 	Collaborate,
+	Introduction,
 	EmailNotification
 };
