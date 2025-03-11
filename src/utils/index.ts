@@ -1,4 +1,4 @@
-import { getHTML } from './formatters';
+import { getHTML, totalExperience } from './formatters';
 import { telegram } from './telegram';
 
-export { getHTML, telegram };
+export { getHTML, totalExperience, telegram };

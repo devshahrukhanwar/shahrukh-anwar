@@ -1,11 +1,6 @@
 <script lang="ts" setup>
-import { ref } from 'vue';
-
 import { experience } from '@/config';
-
-const experienceYears = ref<number>(0);
-const year: number = new Date().getFullYear();
-experienceYears.value = year - experience.joining;
+import { totalExperience } from '@/utils';
 </script>
 
 <template>
@@ -36,7 +31,7 @@ experienceYears.value = year - experience.joining;
 			</p>
 			<div class="column is-inline-flex has-text-left p-0 mt-5 has-text-centered-mobile experience">
 				<div class="column is-uppercase p-0">
-					<p class="text-bold">+{{ experienceYears }}</p>
+					<p class="text-bold">+{{ totalExperience }}</p>
 					<span>Years of experience</span>
 				</div>
 				<div class="column is-uppercase p-0">
