@@ -1,5 +1,27 @@
 {
 	"client": 9,
 	"joining": 2017,
-	"projects": 10
+	"projects": 10,
+	"companies": [
+		{
+			"name": "SenecaGlobal",
+			"tenure": "Jan 2022 - Present",
+			"details": "Led the design team in creating user-centric mobile and web applications, improving the user experience and increasing user engagement."
+		},
+		{
+			"name": "ValueCoders",
+			"tenure": "Sept 2019 - Dec 2021",
+			"details": "Led the design team in creating user-centric mobile and web applications, improving the user experience and increasing user engagement."
+		},
+		{
+			"name": "Sparx IT",
+			"tenure": "Mar 2019 - Sept 2019",
+			"details": "Led the design team in creating user-centric mobile and web applications, improving the user experience and increasing user engagement."
+		},
+		{
+			"name": "HestaBit",
+			"tenure": "July 2017 - Feb 2019",
+			"details": "Led the design team in creating user-centric mobile and web applications, improving the user experience and increasing user engagement."
+		}
+	]
 }
