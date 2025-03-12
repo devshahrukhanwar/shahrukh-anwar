@@ -1,31 +1,45 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { reactive } from 'vue';
 import { totalExperience } from '@/utils';
 import { IconWrapper } from '@/components';
+import { experience } from '@/config';
 
-const isHovered = ref(false);
+interface Company {
+  name: string
+  details: string
+  tenure: string
+}
+
+const companies = reactive(experience.companies.map((company: Company) => ({
+  ...company,
+  isHovered: false
+})));
 </script>
 
 <template>
   <div
     class="columns is-block experience"
-    @mouseenter="isHovered = true"
-    @mouseleave="isHovered = false"
   >
     <div class="column has-text-left has-text-centered-mobile pb-5">
 			<p class="heading">
 				Over {{ totalExperience }} Years of <br /> Design <span class="text-highlight">Expertise</span>
 			</p>
     </div>
-    <div class="column card has-text-left ml-3 companies">
-      <IconWrapper icon="arrow" :tilted="true" :hovered="isHovered" />
+    <div
+      class="column card has-text-left companies mx-3"
+      :key="company.name"
+      v-for="company in companies"
+      @mouseenter="company.isHovered = true"
+      @mouseleave="company.isHovered = false"
+    >
+      <IconWrapper icon="arrow" :tilted="true" :hovered="company.isHovered" />
       <div class="column p-0">
-        <div class="column py-0 name">PixelForge Studios</div>
+        <div class="column py-0 name">{{ company.name }}</div>
         <div class="column pb-2 pt-1 is-three-quarters detail">
-          Led the design team in creating user-centric mobile and web applications, improving the user experience and increasing user engagement.
+          {{ company.details }}
         </div>
         <div class="column pb-1 tenure">
-          Jan 2020 - Present
+          {{ company.tenure }}
         </div>
       </div>
     </div>
@@ -62,6 +76,17 @@ const isHovered = ref(false);
 
       .name, .detail, .tenure {
         color: var(--text-color);
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .heading {
+      font-size: 48px;
+    }
+    .companies {
+      .detail {
+        width: 90%;
       }
     }
   }
