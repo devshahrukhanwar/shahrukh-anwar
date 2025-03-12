@@ -33,12 +33,17 @@ const routes = [
 	},
 	{
 		path: '/experience',
-		name: 'Experience',
-		component: Experience,
-		meta: {
-			title: 'Experience',
-			showCollab: true
-		}
+		children: [
+			{
+				path: '',
+				name: 'Experience',
+				component: Experience,
+				meta: {
+					title: 'Experience',
+					showCollab: true
+				}
+			}
+		]
 	},
 	{
 		path: '/thoughts',
