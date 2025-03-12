@@ -22,7 +22,7 @@ withDefaults(defineProps<Props>(), {
 <style lang="scss" scoped>
 .arrow {
   top: 8%;
-  right: 3%;
+  right: 2%;
   color: var(--text-color);
   padding: 25px;
   position: absolute;
@@ -49,5 +49,10 @@ withDefaults(defineProps<Props>(), {
   &.is-hovered {
 		background-color: var(--bg-white);
 	}
+
+  @media screen and (max-width: 768px) {
+    top: 5%;
+    right: 4%;
+  }
 }
 </style>
