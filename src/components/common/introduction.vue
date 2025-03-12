@@ -22,9 +22,9 @@ import { totalExperience } from '@/utils';
 					Specialized in transforming ideas into beautifully crafted products.
 				</span>
 				<span class="is-hidden-desktop">
-					Passionate about creating intuitive and engaging
+					Passionate about creating intuitive and
 					<br />
-					software experiences. Specialized in transforming ideas into
+					engaging software experiences. Specialized in transforming ideas into
 					<br />
 					beautifully crafted products.
 				</span>
