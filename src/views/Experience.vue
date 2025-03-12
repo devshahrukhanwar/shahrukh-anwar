@@ -20,9 +20,9 @@ const companies = reactive(experience.companies.map((company: Company) => ({
   <div
     class="columns is-block experience"
   >
-    <div class="column has-text-left has-text-centered-mobile pb-5">
+    <div class="column has-text-left has-text-centered-mobile pb-5 headline">
 			<p class="heading">
-				Over {{ totalExperience }} Years of <br /> Design <span class="text-highlight">Expertise</span>
+				Over {{ totalExperience }} Years of <br /> Developer <span class="text-highlight">Expertise</span>
 			</p>
     </div>
     <div
@@ -35,9 +35,7 @@ const companies = reactive(experience.companies.map((company: Company) => ({
       <IconWrapper icon="arrow" :tilted="true" :hovered="company.isHovered" />
       <div class="column p-0">
         <div class="column py-0 name">{{ company.name }}</div>
-        <div class="column pb-2 pt-1 is-three-quarters detail">
-          {{ company.details }}
-        </div>
+        <div class="column pb-2 pt-1 is-three-quarters detail" v-html="company.details"></div>
         <div class="column pb-1 tenure">
           {{ company.tenure }}
         </div>
@@ -48,11 +46,13 @@ const companies = reactive(experience.companies.map((company: Company) => ({
 
 <style lang="scss" scoped>
 .experience {
-	.heading {
-		font-size: 68px;
-    font-weight: 550;
-		line-height: 1.1em;
-	}
+  .headline {
+    .heading {
+      font-size: 68px;
+      font-weight: 550;
+      line-height: 1.1em;
+    }
+  }
   .companies {
     cursor: pointer;
     position: relative;
@@ -81,8 +81,13 @@ const companies = reactive(experience.companies.map((company: Company) => ({
   }
 
   @media screen and (max-width: 768px) {
-    .heading {
-      font-size: 48px;
+    .headline {
+      padding-left: 0;
+      padding-right: 0;
+
+      .heading {
+        font-size: 48px;
+      }
     }
     .companies {
       .detail {
