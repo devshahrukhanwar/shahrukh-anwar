@@ -1,5 +1,27 @@
 {
 	"client": 9,
 	"joining": 2017,
-	"projects": 10
+	"projects": 10,
+	"companies": [
+		{
+			"name": "SenecaGlobal",
+			"tenure": "Jan 2022 - Present",
+			"details": "Joined as a <b>Senior Software Engineer</b> with the role of <b>Independent Contributer</b>. Getting my hands dirty with <b>Design Patterns, SOLID Principles, Agile Practices, Microservices</b>, etc."
+		},
+		{
+			"name": "ValueCoders",
+			"tenure": "Sept 2019 - Dec 2021",
+			"details": "Worked as an integral part of the team at <b>ValueCoders</b> as a <b>Full Stack Developer</b>. Got my hands on <b>Laravel, Vuejs, Elasticsearch, Symfony</b>, etc. Gave a lot of training to the team members and associate developers."
+		},
+		{
+			"name": "Sparx IT",
+			"tenure": "Mar 2019 - Sept 2019",
+			"details": "My <b>Full Stack Development</b> journey started here. Worked on <b>Laravel</b>, <b>Node.js</b>, <b>Vuejs</b>, <b>JQuery</b> and similar technologies here with a great team to build some of the very interesting products with a very collaborative and great management."
+		},
+		{
+			"name": "HestaBit",
+			"tenure": "July 2017 - Feb 2019",
+			"details": "Started my career as a <b>Backend Developer</b> mainly in <b>PHP</b> and <b>Laravel</b>. Learned a lot and grew with <b>HestaBit</b> for 2 years. Found some great collegues there. Great management and people to work with."
+		}
+	]
 }

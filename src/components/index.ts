@@ -11,12 +11,16 @@ import Profile from './profile.vue';
 import Social from './social.vue';
 import TopNavbar from './topnav.vue';
 
+// Icons
+import IconWrapper from './icons/icon-wrapper.vue';
+
 export {
 	FAQ,
 	Social,
 	Profile,
 	ThankYou,
 	TopNavbar,
+	IconWrapper,
 	ThemeSwitch,
 	Collaborate,
 	Introduction,
