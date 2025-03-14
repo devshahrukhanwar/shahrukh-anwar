@@ -6,16 +6,17 @@ import EmailNotification from './common/notifications/email-notification.vue';
 // Notifications
 import ThankYou from './common/notifications/thank-you.vue';
 import ThemeSwitch from './common/theme-switch.vue';
+import Tool from './common/tool.vue';
+// Icons
+import IconWrapper from './icons/icon-wrapper.vue';
 // Main Components
 import Profile from './profile.vue';
 import Social from './social.vue';
 import TopNavbar from './topnav.vue';
 
-// Icons
-import IconWrapper from './icons/icon-wrapper.vue';
-
 export {
 	FAQ,
+	Tool,
 	Social,
 	Profile,
 	ThankYou,

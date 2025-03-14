@@ -24,12 +24,17 @@ const routes = [
 	},
 	{
 		path: '/tools',
-		name: 'Tools',
-		component: Tools,
-		meta: {
-			title: 'Tools',
-			showCollab: true
-		}
+		children: [
+			{
+				path: '',
+				name: 'Tools',
+				component: Tools,
+				meta: {
+					title: 'Tools',
+					showCollab: true
+				}
+			}
+		]
 	},
 	{
 		path: '/experience',

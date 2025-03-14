@@ -1,5 +1,6 @@
+import { createApp, h, ref } from 'vue';
+
 import { experience } from '@/config';
-import { createApp, ref, h } from 'vue';
 
 const year: number = new Date().getFullYear();
 export const totalExperience = ref<number>(year - experience.joining);

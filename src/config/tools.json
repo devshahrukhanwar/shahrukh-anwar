@@ -1,0 +1,44 @@
+[
+	{
+		"name": "Laravel",
+		"detail": "Backend Framework (PHP)",
+		"icon": "fab fa-laravel",
+		"color": "#f53003"
+	},
+	{
+		"name": "Vue JS",
+		"detail": "Frontend Framework (JS)",
+		"icon": "fab fa-vuejs",
+		"color": "#42b983"
+	},
+	{
+		"name": "HTML/CSS",
+		"detail": "Structure & Styling",
+		"icon": "fab fa-html5",
+		"color": "#e34f16"
+	},
+	{
+		"name": "MySQL",
+		"detail": "Database (SQL)",
+		"icon": "fas fa-database",
+		"color": "#999da9"
+	},
+	{
+		"name": "Docker",
+		"detail": "Containerization",
+		"icon": "fab fa-docker",
+		"color": "#2496ed"
+	},
+	{
+		"name": "AWS",
+		"detail": "Cloud Services",
+		"icon": "fab fa-aws",
+		"color": "#f89c24"
+	},
+	{
+		"name": "Git",
+		"detail": "Version Control",
+		"icon": "fab fa-git-alt",
+		"color": "#f05639"
+	}
+]
