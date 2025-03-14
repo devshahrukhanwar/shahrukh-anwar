@@ -30,4 +30,3 @@ import { Tools } from '@/views';
 	}
 }
 </style>
-

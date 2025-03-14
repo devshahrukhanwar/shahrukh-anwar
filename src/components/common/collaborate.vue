@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
+
 import { IconWrapper } from '@/components';
 
 const isHovered = ref(false);

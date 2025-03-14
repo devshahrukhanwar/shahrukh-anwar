@@ -12,7 +12,9 @@ import { totalExperience } from '@/utils';
 					Ideas into <span class="text-highlight">Reality</span>
 				</span>
 				<span class="is-hidden-desktop">
-					Transforming <br /> Your Ideas <br /> into <span class="text-highlight">Reality</span>
+					Transforming <br />
+					Your Ideas <br />
+					into <span class="text-highlight">Reality</span>
 				</span>
 			</p>
 			<p class="description mt-2">
@@ -29,7 +31,9 @@ import { totalExperience } from '@/utils';
 					beautifully crafted products.
 				</span>
 			</p>
-			<div class="column is-inline-flex has-text-left p-0 mt-5 has-text-centered-mobile experience">
+			<div
+				class="column is-inline-flex has-text-left p-0 mt-5 has-text-centered-mobile experience"
+			>
 				<div class="column is-uppercase p-0">
 					<p class="text-bold">+{{ totalExperience }}</p>
 					<span>Years of experience</span>
@@ -40,7 +44,8 @@ import { totalExperience } from '@/utils';
 				</div>
 				<div class="column is-uppercase p-0">
 					<p class="text-bold">+{{ experience.client }}</p>
-					<span>Worldwide <br />
+					<span
+						>Worldwide <br />
 						Clients</span
 					>
 				</div>
@@ -48,12 +53,13 @@ import { totalExperience } from '@/utils';
 			<div class="column is-flex px-0 mt-5 has-text-cenetered-mobile">
 				<div class="column is-narrow pl-0">
 					<router-link :to="{ name: 'Contact' }">
-						<button class="button">
-							Let's Talk
-						</button>
+						<button class="button">Let's Talk</button>
 					</router-link>
 				</div>
-				<div class="column is-narrow is-5-mobile is-align-self-center has-text-centered-mobile work" v-if="0">
+				<div
+					class="column is-narrow is-5-mobile is-align-self-center has-text-centered-mobile work"
+					v-if="0"
+				>
 					<router-link :to="{ name: 'Projects' }">
 						My Work
 						<span class="ml-2">
@@ -70,7 +76,7 @@ import { totalExperience } from '@/utils';
 .introduction {
 	.heading {
 		font-size: 68px;
-    font-weight: 550;
+		font-weight: 550;
 		line-height: 1.1em;
 	}
 	.description {
@@ -92,7 +98,8 @@ import { totalExperience } from '@/utils';
 			}
 		}
 	}
-	.work, a {
+	.work,
+	a {
 		color: var(--text-color);
 		cursor: pointer;
 		font-size: var(--text-small-font-size);
@@ -115,7 +122,7 @@ import { totalExperience } from '@/utils';
 	}
 
 	@media screen and (max-width: 768px) {
-		.heading, {
+		.heading {
 			font-size: 48px;
 		}
 		.experience div .text-bold {
