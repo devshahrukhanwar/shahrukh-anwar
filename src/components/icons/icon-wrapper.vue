@@ -35,7 +35,6 @@ withDefaults(defineProps<Props>(), {
     top: 50%;
     right: 50%;
     transform: translate(50%, -50%);
-    position: absolute;
     font-size: 24px;
 
     &.is-tilted {
