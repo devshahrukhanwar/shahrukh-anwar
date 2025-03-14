@@ -1,4 +1,5 @@
 // Common
+import Tool from './common/tool.vue';
 import Collaborate from './common/collaborate.vue';
 import FAQ from './common/faq.vue';
 import Introduction from './common/introduction.vue';
@@ -16,6 +17,7 @@ import IconWrapper from './icons/icon-wrapper.vue';
 
 export {
 	FAQ,
+	Tool,
 	Social,
 	Profile,
 	ThankYou,
