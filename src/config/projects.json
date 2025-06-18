@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Laravel",
+    "subtitle": "Backend Framework (PHP)",
+    "banner": "https://framerusercontent.com/images/hxgSQmquybiB6mIsV8wyxmKgo.jpeg"
+  },
+  {
+    "title": "Vue JS",
+    "subtitle": "Frontend Framework (JS)",
+    "banner": "https://framerusercontent.com/images/W7qK3jBt3YbPVXnLM1pV89rkB8.jpeg"
+  },
+  {
+    "title": "HTML/CSS",
+    "subtitle": "Structure & Styling",
+    "banner": "https://framerusercontent.com/images/hxgSQmquybiB6mIsV8wyxmKgo.jpeg"
+  },
+  {
+    "title": "MySQL",
+    "subtitle": "Database (SQL)",
+    "banner": "https://framerusercontent.com/images/W7qK3jBt3YbPVXnLM1pV89rkB8.jpeg"
+  },
+  {
+    "title": "Docker",
+    "subtitle": "Containerization",
+    "banner": "https://framerusercontent.com/images/hxgSQmquybiB6mIsV8wyxmKgo.jpeg"
+  },
+  {
+    "title": "AWS",
+    "subtitle": "Cloud Services",
+    "banner": "https://framerusercontent.com/images/W7qK3jBt3YbPVXnLM1pV89rkB8.jpeg"
+  },
+  {
+    "title": "Git",
+    "subtitle": "Version Control",
+    "banner": "https://framerusercontent.com/images/hxgSQmquybiB6mIsV8wyxmKgo.jpeg"
+  }
+]
