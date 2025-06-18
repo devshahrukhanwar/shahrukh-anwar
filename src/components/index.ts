@@ -7,6 +7,7 @@ import EmailNotification from './common/notifications/email-notification.vue';
 import ThankYou from './common/notifications/thank-you.vue';
 import ThemeSwitch from './common/theme-switch.vue';
 import Tool from './common/tool.vue';
+import Tooltip from './common/tooltip.vue';
 // Icons
 import IconWrapper from './icons/icon-wrapper.vue';
 // Main Components
@@ -19,6 +20,7 @@ export {
 	Tool,
 	Social,
 	Profile,
+	Tooltip,
 	ThankYou,
 	TopNavbar,
 	IconWrapper,

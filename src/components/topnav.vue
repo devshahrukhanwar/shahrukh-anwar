@@ -1,23 +1,33 @@
 <script setup>
+import { ref } from 'vue';
+
+import { Tooltip } from '@/components';
 import menu from '@/config/nav.json';
+
+const isHovering = ref({});
 </script>
 
 <template>
 	<nav class="topnav columns navbar is-inline-flex is-vcentered px-2">
 		<div
-			class="column is-narrow pr-1 py-0"
+			class="column is-narrow is-flex is-justify-content-center pr-1 py-0"
 			:key="item.title"
 			v-for="item in menu"
 		>
-			<router-link :to="item.path">
+			<router-link
+				class="link"
+				:to="item.path"
+				@mouseenter="isHovering[item.title] = true"
+				@mouseleave="isHovering[item.title] = false"
+			>
 				<span
 					class="icon is-clickable"
 					:class="{ 'is-active': $route.path === item.path }"
-					:title="item.title"
 				>
 					<i :class="item.icon"></i>
 				</span>
 			</router-link>
+			<Tooltip :content="item.title" v-if="isHovering[item.title]" />
 		</div>
 	</nav>
 </template>
@@ -33,6 +43,11 @@ import menu from '@/config/nav.json';
 	i {
 		color: var(--text-color);
 		font-size: var(--icon-size);
+	}
+
+	.tooltip {
+		bottom: -25px;
+		position: absolute;
 	}
 
 	@media screen and (max-width: 768px) {
