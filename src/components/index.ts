@@ -5,6 +5,7 @@ import Introduction from './common/introduction.vue';
 import EmailNotification from './common/notifications/email-notification.vue';
 // Notifications
 import ThankYou from './common/notifications/thank-you.vue';
+import Project from './common/project.vue';
 import ThemeSwitch from './common/theme-switch.vue';
 import Tool from './common/tool.vue';
 import Tooltip from './common/tooltip.vue';
@@ -19,6 +20,7 @@ export {
 	FAQ,
 	Tool,
 	Social,
+	Project,
 	Profile,
 	Tooltip,
 	ThankYou,
