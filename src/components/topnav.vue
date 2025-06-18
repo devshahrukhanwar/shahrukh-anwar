@@ -1,7 +1,8 @@
 <script setup>
-import menu from '@/config/nav.json';
-import { Tooltip } from '@/components';
 import { ref } from 'vue';
+
+import { Tooltip } from '@/components';
+import menu from '@/config/nav.json';
 
 const isHovering = ref({});
 </script>
@@ -45,7 +46,7 @@ const isHovering = ref({});
 	}
 
 	.tooltip {
-    bottom: -25px;
+		bottom: -25px;
 		position: absolute;
 	}
 
