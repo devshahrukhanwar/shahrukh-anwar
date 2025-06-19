@@ -1,37 +1,32 @@
 [
   {
-    "title": "Laravel",
-    "subtitle": "Backend Framework (PHP)",
+    "title": "Green Street",
+    "subtitle": "Research and Advisory Firm",
     "banner": "https://framerusercontent.com/images/hxgSQmquybiB6mIsV8wyxmKgo.jpeg"
   },
   {
-    "title": "Vue JS",
-    "subtitle": "Frontend Framework (JS)",
+    "title": "HelloPeter",
+    "subtitle": "Reviews and Ratings Platform",
     "banner": "https://framerusercontent.com/images/W7qK3jBt3YbPVXnLM1pV89rkB8.jpeg"
   },
   {
-    "title": "HTML/CSS",
-    "subtitle": "Structure & Styling",
-    "banner": "https://framerusercontent.com/images/hxgSQmquybiB6mIsV8wyxmKgo.jpeg"
+    "title": "VoteMix",
+    "subtitle": "Ticketing and Voting Platform",
+    "banner": "https://framerusercontent.com/images/GQfwMZ7geSwf9Fs1YaG6yIxQabg.jpeg"
   },
   {
-    "title": "MySQL",
-    "subtitle": "Database (SQL)",
-    "banner": "https://framerusercontent.com/images/W7qK3jBt3YbPVXnLM1pV89rkB8.jpeg"
+    "title": "BluHop",
+    "subtitle": "Bottle Refill Finder",
+    "banner": "https://framerusercontent.com/images/HshRT3i6mRb1LDg0Jyk4WHS5Vyw.jpeg"
   },
   {
-    "title": "Docker",
-    "subtitle": "Containerization",
-    "banner": "https://framerusercontent.com/images/hxgSQmquybiB6mIsV8wyxmKgo.jpeg"
+    "title": "Market World",
+    "subtitle": "Coupon and Discount Platform",
+    "banner": "https://framerusercontent.com/images/PVzVftRIkfAepO5033QydfATg.jpeg"
   },
   {
-    "title": "AWS",
-    "subtitle": "Cloud Services",
-    "banner": "https://framerusercontent.com/images/W7qK3jBt3YbPVXnLM1pV89rkB8.jpeg"
-  },
-  {
-    "title": "Git",
-    "subtitle": "Version Control",
-    "banner": "https://framerusercontent.com/images/hxgSQmquybiB6mIsV8wyxmKgo.jpeg"
+    "title": "DandJ",
+    "subtitle": "B2B Denim Community",
+    "banner": "https://framerusercontent.com/images/0Mi0IWlbWJU3AYT2hGFzEwO4Ku8.png"
   }
 ]
