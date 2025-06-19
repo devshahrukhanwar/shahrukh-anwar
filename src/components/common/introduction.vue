@@ -58,7 +58,6 @@ import { totalExperience } from '@/utils';
 				</div>
 				<div
 					class="column is-narrow is-5-mobile is-align-self-center has-text-centered-mobile work"
-					v-if="0"
 				>
 					<router-link :to="{ name: 'Projects' }">
 						My Work
