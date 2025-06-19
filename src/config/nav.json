@@ -19,11 +19,6 @@
 		"icon": "fa-solid fa-briefcase fa-thin-mimic",
 		"path": "/experience"
 	},
-	"thoughts": {
-		"title": "Thoughts",
-		"icon": "fa-regular fa-pen-to-square",
-		"path": "/thoughts"
-	},
 	"contact": {
 		"title": "Contact",
 		"icon": "fa-regular fa-envelope",
