@@ -93,7 +93,7 @@ const companies = reactive(
 			padding-right: 0;
 
 			.heading {
-				font-size: 48px;
+				font-size: var(--heading-size-responsive);
 			}
 		}
 		.companies {
