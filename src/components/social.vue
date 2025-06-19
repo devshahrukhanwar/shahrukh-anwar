@@ -22,7 +22,7 @@ const isHovering = ref({});
 			>
 				<span class="icon is-clickable">
 					<img :src="`icons/${social.icon}.svg`" :alt="social.title" />
-					<Tooltip :content="social.title" v-if="isHovering[social.title]" />
+					<Tooltip class="is-hidden-mobile" :content="social.title" v-if="isHovering[social.title]" />
 				</span>
 			</a>
 		</div>
