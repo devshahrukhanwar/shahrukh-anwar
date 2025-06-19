@@ -35,7 +35,7 @@ import { tools } from '@/config';
 			padding-right: 0;
 
 			.heading {
-				font-size: 48px;
+				font-size: var(--heading-size-responsive);
 			}
 		}
 	}
