@@ -115,7 +115,7 @@ body {
 			$margin-values: (0, 30, 60, 90);
 			@each $value in $margin-values {
 				&-#{$value} {
-					margin-top: #{$value}px;
+					margin-top: #{$value}px !important;
 
 					&-mobile {
 						@media screen and (max-width: 768px) {
