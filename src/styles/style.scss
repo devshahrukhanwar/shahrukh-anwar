@@ -85,7 +85,7 @@ body {
 	}
 
 	h2 {
-		font-size: #{var.$heading-size};
+		font-size: 58px;
 		font-weight: 500;
 		text-shadow: 0.03em 0 0 currentColor;
 		line-height: 1.2em;
@@ -95,14 +95,14 @@ body {
 	}
 	.section-margin {
 		&-top {
-			$margin-values: (30, 60, 90);
+			$margin-values: (0, 30, 60, 90);
 			@each $value in $margin-values {
 				&-#{$value} {
 					margin-top: #{$value}px;
 
 					&-mobile {
 						@media screen and (max-width: 768px) {
-							margin-top: #{$value}px;
+							margin-top: #{$value}px !important;
 						}
 					}
 				}
@@ -116,5 +116,6 @@ body {
 	--text-small-font-size: #{var.$text-small-font-size};
 	--label-font-size: #{var.$label-font-size};
 	--h2-mobile-size: #{var.$h2-mobile-size};
+	--heading-size: #{var.$heading-size};
 	--heading-size-responsive: #{var.$heading-size-responsive};
 }
