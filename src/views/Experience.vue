@@ -34,11 +34,12 @@ const companies = reactive(
 			@mouseenter="company.isHovered = true"
 			@mouseleave="company.isHovered = false"
 		>
-			<IconWrapper icon="arrow" :tilted="true" :hovered="company.isHovered" />
+			<IconWrapper icon="arrow" :tilted="true" :hovered="company.isHovered" v-if="0" />
 			<div class="column p-0">
 				<div class="column py-0 name">{{ company.name }}</div>
+				<!-- is-three-quarters  -->
 				<div
-					class="column pb-2 pt-1 is-three-quarters detail"
+					class="column pb-2 pt-1 detail"
 					v-html="company.details"
 				></div>
 				<div class="column pb-1 tenure">
