@@ -90,6 +90,23 @@ body {
 		text-shadow: 0.03em 0 0 currentColor;
 		line-height: 1.2em;
 	}
+	.headline {
+		.heading {
+			font-size: var(--heading-size);
+			font-weight: 550;
+			line-height: 1.1em;
+		}
+
+		@media screen and (max-width: 768px) {
+			padding-left: 0;
+			padding-right: 0;
+
+			.heading {
+				font-size: var(--heading-size-responsive);
+			}
+		}
+	}
+
 	.text-highlight {
 		color: var(--text-highlight);
 	}
