@@ -6,7 +6,7 @@ import { Tools, Projects } from '@/views';
 <template>
 	<section>
 		<Introduction />
-		<Projects />
+		<Projects class="mt-6 section-margin-top-0-mobile" />
 		<Tools />
 	</section>
 </template>

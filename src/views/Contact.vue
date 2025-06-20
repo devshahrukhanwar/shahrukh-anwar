@@ -48,11 +48,11 @@ const handleSubmit = (
 
 <template>
 	<div class="contact container columns is-block p-0">
-		<div class="column has-text-left has-text-centered-mobile p-0">
-			<h2>
+		<div class="headline column has-text-left has-text-centered-mobile p-0">
+			<p class="heading">
 				Let’s Create <br />Something <span class="text-highlight">Amazing</span>
-			</h2>
-		</div>
+			</p>
+	</div>
 		<div class="contact-form card column is-block p-4 mt-5">
 			<Form :validation-schema="schema" @submit="handleSubmit">
 				<div class="field">
@@ -139,12 +139,6 @@ const handleSubmit = (
 			margin-top: 30px;
 			border-radius: 10px;
 			background-color: var(--button-color);
-		}
-	}
-
-	@media screen and (max-width: 768px) {
-		h2 {
-			font-size: var(--h2-mobile-size);
 		}
 	}
 }

@@ -52,13 +52,6 @@ const companies = reactive(
 
 <style lang="scss" scoped>
 .experience {
-	.headline {
-		.heading {
-			font-size: 68px;
-			font-weight: 550;
-			line-height: 1.1em;
-		}
-	}
 	.companies {
 		cursor: pointer;
 		position: relative;
@@ -89,14 +82,6 @@ const companies = reactive(
 	}
 
 	@media screen and (max-width: 768px) {
-		.headline {
-			padding-left: 0;
-			padding-right: 0;
-
-			.heading {
-				font-size: var(--heading-size-responsive);
-			}
-		}
 		.companies {
 			.detail {
 				width: 90%;

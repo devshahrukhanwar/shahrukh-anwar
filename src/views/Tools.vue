@@ -18,26 +18,3 @@ import { tools } from '@/config';
 		</div>
 	</div>
 </template>
-
-<style lang="scss" scoped>
-.tools {
-	.headline {
-		.heading {
-			font-size: 68px;
-			font-weight: 550;
-			line-height: 1.1em;
-		}
-	}
-
-	@media screen and (max-width: 768px) {
-		.headline {
-			padding-left: 0;
-			padding-right: 0;
-
-			.heading {
-				font-size: var(--heading-size-responsive);
-			}
-		}
-	}
-}
-</style>
