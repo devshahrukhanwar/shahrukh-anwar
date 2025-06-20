@@ -1,4 +1,5 @@
 // Common
+import Card from './common/card.vue';
 import Collaborate from './common/collaborate.vue';
 import FAQ from './common/faq.vue';
 import Introduction from './common/introduction.vue';
@@ -19,6 +20,7 @@ export {
 	FAQ,
 	Tool,
 	Social,
+	Card,
 	Profile,
 	Tooltip,
 	ThankYou,

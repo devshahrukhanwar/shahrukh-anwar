@@ -23,3 +23,12 @@ export const getHTML = (component: any, props: any = {}): string => {
 
 	return rawHtml;
 };
+
+export const getDate = (date: string): string => {
+	const options: Intl.DateTimeFormatOptions = {
+		year: 'numeric',
+		month: 'long',
+		day: 'numeric'
+	};
+	return new Date(date).toLocaleDateString('en-US', options);
+};
