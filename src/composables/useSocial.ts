@@ -6,7 +6,9 @@ export function useSocial() {
 			const response = await axios.get(
 				`${import.meta.env.VITE_API_URL}/social/posts`
 			);
-			console.log(response.data);
+
+			console.log('Social data fetched successfully:', response.data);
+			return response.data;
 		} catch (error) {
 			console.error('Error fetching social data:', error);
 		}
