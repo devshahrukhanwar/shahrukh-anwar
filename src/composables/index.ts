@@ -1,3 +1,4 @@
 import { useNotification } from './useNotification';
+import { useSocial } from './useSocial';
 
-export { useNotification };
+export { useSocial, useNotification };
