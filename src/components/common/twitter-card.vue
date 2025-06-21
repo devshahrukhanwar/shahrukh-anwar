@@ -1,15 +1,32 @@
 <script setup lang="ts">
-// interface Card {
-// 	user?: object
-// }
+import { ref, onMounted, onUnmounted, watch } from 'vue';
+import { type TwitterSchema } from '@/stores/thoughts/schema'
 
-// interface Props {
-// 	data: Card
-// }
+interface Props {
+	user: TwitterSchema['twitter']['user'];
+  tweets: TwitterSchema['twitter']['tweets'];
+}
 
-// const props = defineProps<Props>();
+const currentIndex = ref(0);
+let intervalId: number | undefined;
 
-// console.log('==========> data', props.data);
+const props = defineProps<Props>();
+
+function nextTweet() {
+  if (props.tweets && props.tweets.length > 0) {
+    currentIndex.value = (currentIndex.value + 1) % props.tweets.length;
+  }
+}
+
+onMounted(() => {
+  if (props.tweets && props.tweets.length > 1) {
+    intervalId = window.setInterval(nextTweet, 3000); // 3 seconds
+  }
+});
+
+onUnmounted(() => {
+  if (intervalId) clearInterval(intervalId);
+});
 </script>
 
 <template>
@@ -18,17 +35,21 @@
       <i class="fa-solid fa-quote-left"></i>
     </div>
     <div class="column">
-      The AI Assistant has completely transformed the way I work! It handles my scheduling, drafts emails, and even helps me brainstorm content ideas. I can't imagine going back to doing everything manually!
+      <transition name="fade" mode="out-in">
+        <div :key="currentIndex" v-html="tweets[currentIndex].text"></div>
+      </transition>
     </div>
     <div class="author column is-flex is-align-items-center">
       <div class="column is-inline-flex-desktop p-0">
         <div class="column is-flex is-align-items-end p-0">
           <div class="avatar column is-narrow is-flex is-align-items-center px-0">
-            <img src="https://pbs.twimg.com/profile_images/1328780631870898177/pKNfuzZP_400x400.jpg" alt="sss" />
+            <img :src="user.profile_image_url" :alt="user.name" />
           </div>
           <div class="column">
-            <div class="name">Shahrukh Anwar</div>
-            <div class="username">@shahrukhanwar58</div>
+            <div class="name">{{ user.name }}</div>
+            <div class="username is-flex is-align-items-center">
+              <span class="text-highlight"><i class="fa-brands fa-twitter"></i></span>/@{{ user.username }}
+            </div>
           </div>
         </div>
         <div class="column is-flex is-align-items-end is-justify-content-flex-end">
@@ -46,7 +67,7 @@
   color: var(--text-color);
   font-size: 16px;
 
-  i {
+  i.fa-solid.fa-quote-left {
     font-size: 24px;
   }
   .author {
@@ -62,6 +83,14 @@
     }
   }
 
+  &:hover {
+		background-color: var(--bg-purple);
+
+		.text-highlight {
+			color: var(--text-color);
+		}
+	}
+
   @media screen and (max-width: 768px) {
     .author {
       .avatar {
@@ -73,5 +102,12 @@
       }
     }
   }
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.8s;
+}
+.fade-enter-from, .fade-leave-to {
+  opacity: 0;
 }
 </style>
