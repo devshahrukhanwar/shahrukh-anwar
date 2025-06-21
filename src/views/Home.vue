@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Introduction } from '@/components';
-import { Tools, Projects } from '@/views';
+import { Tools, Projects, Thoughts } from '@/views';
 </script>
 
 <template>
@@ -8,6 +8,7 @@ import { Tools, Projects } from '@/views';
 		<Introduction />
 		<Projects class="mt-6 section-margin-top-0-mobile" />
 		<Tools />
+		<Thoughts />
 	</section>
 </template>
 
@@ -18,7 +19,8 @@ import { Tools, Projects } from '@/views';
 }
 
 ::v-deep(.tools .headline .heading),
-::v-deep(.projects .headline .heading) {
+::v-deep(.projects .headline .heading),
+::v-deep(.thoughts .headline .heading) {
 	font-size: 58px !important;
 	font-weight: 500 !important;
 	text-shadow: 0.03em 0 0 currentColor;
