@@ -1,17 +1,17 @@
 <script setup lang="ts">
-import { type TwitterSchema } from '@/stores/thoughts/schema'
-import { Card, Carousel, TwitterCard } from '@/components';
+import { storeToRefs } from 'pinia';
+import { Card, TwitterCard } from '@/components';
 import { thoughts, socials } from '@/config';
-import { useSocial } from '@/composables';
-import { ref, onMounted } from 'vue';
+import { useThoughtsStore } from '@/stores';
+import { onMounted } from 'vue';
 
-const { getSocialData } = useSocial();
-const socialData = ref<TwitterSchema | null>(null);
+const thoughtsStore = useThoughtsStore();
+const { socialData } = storeToRefs(thoughtsStore);
 
 const twitterURL = socials.twitter.url;
 
 onMounted(async () => {
-	socialData.value = await getSocialData();
+	await thoughtsStore.fetchSocialData();
 });
 </script>
 
@@ -43,18 +43,6 @@ onMounted(async () => {
 							:user="socialData.twitter.user"
 							v-if="socialData" />
 					</a>
-				</div>
-			</div>
-			<div class="blog-section column has-text-left mt-5">
-				<div class="bullets column is-flex p-0 pb-3">
-					<div class="column p-0">
-						<span class="text-highlight is-clickable">#</span> My Blogs
-					</div>
-				</div>
-				<div class="column is-flex-desktop is-flex-wrap-wrap p-0">
-					<div class="column is-6 pl-0" v-for="thought in thoughts" :key="thought.title">
-						<Card :data="thought" :isLink="false" />
-					</div>
 				</div>
 			</div>
 		</div>
