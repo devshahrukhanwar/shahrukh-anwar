@@ -2,10 +2,10 @@ import { defineStore } from 'pinia';
 import { ref } from 'vue';
 
 import { useSocial } from '@/composables/useSocial';
-import type { TwitterSchema } from '@/stores/thoughts/schema';
+import type { SocialSchema } from '@/stores/thoughts/schema';
 
 export const useThoughtsStore = defineStore('thoughts', () => {
-	const socialData = ref<TwitterSchema | null>(null);
+	const socialData = ref<SocialSchema | null>(null);
 	const loading = ref(false);
 	const error = ref<string | null>(null);
 
