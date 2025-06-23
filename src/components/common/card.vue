@@ -1,16 +1,9 @@
 <script setup lang="ts">
 import { getDate } from '@/utils';
-
-interface Card {
-	title: string;
-	banner: string;
-	date?: string;
-	subtitle?: string;
-	source?: string;
-}
+import { type BlogSchema } from '@/stores/thoughts/schema';
 
 interface Props {
-	data: Card;
+	data: BlogSchema;
 	isLink?: boolean;
 }
 
