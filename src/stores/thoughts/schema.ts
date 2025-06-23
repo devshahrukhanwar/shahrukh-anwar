@@ -39,10 +39,11 @@ const twitterSchema = z.object({
 
 const blogSchema = z.object({
 	url: z.string(),
-	date: z.string(),
+	date: z.string().optional(),
 	title: z.string(),
-	source: z.string(),
-	banner: z.string()
+	source: z.string().optional(),
+	banner: z.string(),
+	subtitle: z.string().optional()
 });
 
 export const socialSchema = z.object({
@@ -53,4 +54,5 @@ export const socialSchema = z.object({
 	})
 });
 
+export type BlogSchema = z.infer<typeof blogSchema>;
 export type SocialSchema = z.infer<typeof socialSchema>;
