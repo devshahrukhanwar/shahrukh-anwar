@@ -20,7 +20,7 @@ function nextTweet() {
 
 onMounted(() => {
   if (props.tweets && props.tweets.length > 1) {
-    intervalId = window.setInterval(nextTweet, 3000); // 3 seconds
+    intervalId = window.setInterval(nextTweet, 4000); // 3 seconds
   }
 });
 
@@ -39,24 +39,22 @@ onUnmounted(() => {
         <div :key="currentIndex" v-html="tweets[currentIndex].text"></div>
       </transition>
     </div>
-    <div class="author column is-flex is-align-items-center">
-      <div class="column is-inline-flex-desktop p-0">
-        <div class="column is-flex is-align-items-end p-0">
-          <div class="avatar column is-narrow is-flex is-align-items-center px-0">
-            <img :src="user.profile_image_url" :alt="user.name" />
-          </div>
-          <div class="column">
-            <div class="name">{{ user.name }}</div>
-            <div class="username is-flex is-align-items-center">
-              <span class="text-highlight"><i class="fa-brands fa-twitter"></i></span>/@{{ user.username }}
-            </div>
+    <div class="author column is-flex is-align-items-center is-flex is-align-items-end">
+      <div class="column is-flex is-align-items-end p-0">
+        <div class="avatar column is-narrow is-flex is-align-items-center px-0">
+          <img :src="user.profile_image_url" :alt="user.name" />
+        </div>
+        <div class="column">
+          <div class="name">{{ user.name }}</div>
+          <div class="username is-flex is-align-items-center">
+            <span class="text-highlight"><i class="fa-brands fa-twitter"></i></span>/@{{ user.username }}
           </div>
         </div>
-        <div class="column is-flex is-align-items-end is-justify-content-flex-end">
-          <span class="text-highlight">#</span>webdev
-          &nbsp;
-          <span class="text-highlight">#</span>developerlife
-        </div>
+      </div>
+      <div class="column is-flex is-justify-content-flex-end">
+        <span class="text-highlight">#</span>webdev
+        &nbsp;
+        <span class="text-highlight">#</span>developerlife
       </div>
     </div>
   </div>
@@ -100,6 +98,8 @@ onUnmounted(() => {
         padding-left: 0;
         justify-content: flex-start !important;
       }
+
+      display: block !important;
     }
   }
 }

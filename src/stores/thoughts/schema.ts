@@ -25,7 +25,7 @@ const userSchema = z.object({
 	username: z.string()
 });
 
-const postSchema = z.object({
+const twitterSchema = z.object({
 	author_id: z.string(),
 	created_at: z.string(),
 	// edit_history_tweet_ids: z.array(z.string()),
@@ -37,11 +37,22 @@ const postSchema = z.object({
 	text: z.string()
 });
 
-export const twitterSchema = z.object({
+const blogSchema = z.object({
+	url: z.string(),
+	date: z.string().optional(),
+	title: z.string(),
+	source: z.string().optional(),
+	banner: z.string(),
+	subtitle: z.string().optional()
+});
+
+export const socialSchema = z.object({
+	blogs: z.array(blogSchema),
 	twitter: z.object({
 		user: userSchema,
-		tweets: z.array(postSchema)
+		tweets: z.array(twitterSchema)
 	})
 });
 
-export type TwitterSchema = z.infer<typeof twitterSchema>;
+export type BlogSchema = z.infer<typeof blogSchema>;
+export type SocialSchema = z.infer<typeof socialSchema>;

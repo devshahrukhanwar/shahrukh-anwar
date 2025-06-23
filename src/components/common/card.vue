@@ -1,18 +1,15 @@
 <script setup lang="ts">
 import { getDate } from '@/utils';
-
-interface Card {
-	title: string;
-	banner: string;
-	date?: string;
-	subtitle?: string;
-}
+import { type BlogSchema } from '@/stores/thoughts/schema';
 
 interface Props {
-	data: Card;
+	data: BlogSchema;
 	isLink?: boolean;
 }
 
+const formattedTitle = (title: string) => {
+	return title.length > 80 ? title.slice(0, 80) + '...' : title;
+};
 defineProps<Props>();
 </script>
 
@@ -26,13 +23,14 @@ defineProps<Props>();
 				<div class="date mb-3" v-if="data?.date">
 					{{ getDate(data?.date) }}
 				</div>
-				<div class="title is-inline-flex is-align-items-center">
-					<span>{{ data.title }}</span>
+				<div class="card-title is-inline-flex is-align-items-center">
+					<span>{{ formattedTitle(data.title) }}</span>
 					<span class="ml-2" v-if="isLink">
 						<i class="fa-solid fa-arrow-right-long"></i>
 					</span>
 				</div>
 				<div class="subtitle mt-2" v-if="data?.subtitle">{{ data?.subtitle }}</div>
+				<div class="source text-highlight" v-if="data?.source">({{ data?.source }})</div>
 			</div>
 		</div>
 	</div>
@@ -42,21 +40,21 @@ defineProps<Props>();
 .card {
 	background-color: var(--card-bg-color);
 
-	.title {
+	.card-title {
 		color: var(--text-color);
-		font-size: 24px;
+		font-size: 20px;
+		line-height: 1.2;
 		font-weight: normal;
 
 		i {
 			rotate: -45deg;
 			font-size: 18px;
-			// transform: scaleX(1.3);
 			transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 		}
 	}
 	.subtitle, .date {
 		color: var(--text-color-grey);
-		font-size: var(--text-small-font-size);
+		font-size: var(--label-font-size);
 	}
   .column.banner {
     overflow: hidden;
@@ -75,10 +73,9 @@ defineProps<Props>();
   }
 
 	&:hover {
-    .title {
-      color: var(--text-highlight);
-
+    .card-title {
 			i {
+				color: var(--text-highlight);
 				transform: scaleX(1.3) translateX(2px);
 				transition: transform 0.5s ease;
 			}

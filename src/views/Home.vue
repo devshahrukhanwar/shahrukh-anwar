@@ -8,7 +8,7 @@ import { Tools, Projects, Thoughts } from '@/views';
 		<Introduction />
 		<Projects class="mt-6 section-margin-top-0-mobile" />
 		<Tools />
-		<Thoughts />
+		<Thoughts class="mt-5" />
 	</section>
 </template>
 

@@ -13,7 +13,9 @@ import { tools } from '@/config';
 		</div>
 		<div class="column is-inline-flex is-flex-wrap-wrap p-0 pl-3">
 			<div class="column is-6 pl-0" v-for="tool in tools" :key="tool.name">
-				<Tool :tool="tool" />
+				<a :href="tool.url" target="_blank" rel="noopener noreferrer">
+					<Tool :tool="tool" />
+				</a>
 			</div>
 		</div>
 	</div>

@@ -1,9 +1,9 @@
 import axios from 'axios';
 
-import { type TwitterSchema, twitterSchema } from '@/stores/thoughts/schema';
+import { type SocialSchema, socialSchema } from '@/stores/thoughts/schema';
 
 export function useSocial() {
-	async function getSocialData(): Promise<TwitterSchema> {
+	async function getSocialData(): Promise<SocialSchema> {
 		try {
 			const response = await axios.get(
 				`${import.meta.env.VITE_API_URL}/social/posts`
@@ -11,7 +11,7 @@ export function useSocial() {
 
 			const { data } = response.data;
 
-			return twitterSchema.parse(data);
+			return socialSchema.parse(data);
 		} catch (error) {
 			console.error('Error fetching social data:', error);
 		}
