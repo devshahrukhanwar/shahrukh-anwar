@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { storeToRefs } from 'pinia';
-import { Card, TwitterCard } from '@/components';
-import { socials, thoughts } from '@/config';
-import { useThoughtsStore } from '@/stores';
 import { onMounted } from 'vue';
+import { storeToRefs } from 'pinia';
+import { socials } from '@/config';
+import { useThoughtsStore } from '@/stores';
+import { Card, TwitterCard } from '@/components';
 
 const thoughtsStore = useThoughtsStore();
 const { socialData } = storeToRefs(thoughtsStore);
@@ -16,7 +16,7 @@ onMounted(async () => {
 </script>
 
 <template>
-	<div class="thoughts columns container is-block">
+	<div class="thoughts columns is-block">
 		<div class="column has-text-left has-text-centered-mobile pb-5 headline">
 			<p class="heading">
 				My Thoughts<span class="is-hidden-desktop"></span>
@@ -26,13 +26,11 @@ onMounted(async () => {
 			</p>
 		</div>
 		<div>
-			<div class="twitter-section column has-text-left">
-				<div class="bullets column is-flex p-0 pb-3">
-					<div class="column p-0">
-						<span class="text-highlight is-clickable">#</span> My Thoughts
-					</div>
+			<div class="twitter-section column has-text-left pr-0">
+				<div class="bullets mb-5">
+					<span><span class="text-highlight is-clickable"># </span>My Thoughts</span>
 				</div>
-				<div class="column">
+				<div class="column p-0 pl-3">
 					<a
 						target="_blank"
 						rel="noopener noreferrer"
@@ -46,11 +44,9 @@ onMounted(async () => {
 					</a>
 				</div>
 			</div>
-			<div class="blog-section column has-text-left mt-5">
-				<div class="bullets column is-flex p-0 pb-3">
-					<div class="column p-0">
-						<span class="text-highlight is-clickable">#</span> My Blogs
-					</div>
+			<div class="blog-section column has-text-left mt-5 pr-0">
+				<div class="bullets mb-1">
+					<span><span class="text-highlight is-clickable"># </span>My Blogs</span>
 				</div>
 				<div class="column is-flex-desktop is-flex-wrap-wrap p-0">
 					<div class="column is-6 pl-0" v-for="blog in socialData?.blogs" :key="blog.title">
@@ -84,12 +80,9 @@ onMounted(async () => {
 	}
 
 	@media screen and (max-width: 768px) {
-    .twitter-section, .column.is-flex, .blog-section {
-			padding-left: 0;
-			padding-right: 0;
-		}
-
 		.blog-section {
+			padding-right: var(--bulma-column-gap) !important;
+
 			.pl-0 {
 				padding-right: 0;
 			}
