@@ -15,7 +15,9 @@ import { projects } from '@/config';
 		</div>
 		<div class="column is-flex-desktop is-flex-wrap-wrap p-0 pl-3">
 			<div class="column is-6 pl-0" v-for="project in projects" :key="project.title">
-				<Card :data="project" :isLink="false" />
+				<a :href="project.url" target="_blank" rel="noopener noreferrer">
+					<Card :data="project" :isLink="false" />
+				</a>
 			</div>
 		</div>
 	</div>
