@@ -1,15 +1,11 @@
 <script setup lang="ts">
-import { getDate } from '@/utils';
+import { getDate, formattedText } from '@/utils';
 import { type BlogSchema } from '@/stores/thoughts/schema';
 
 interface Props {
 	data: BlogSchema;
 	isLink?: boolean;
 }
-
-const formattedTitle = (title: string) => {
-	return title.length > 80 ? title.slice(0, 80) + '...' : title;
-};
 defineProps<Props>();
 </script>
 
@@ -24,7 +20,7 @@ defineProps<Props>();
 					{{ getDate(data?.date) }}
 				</div>
 				<div class="card-title is-inline-flex is-align-items-center">
-					<span>{{ formattedTitle(data.title) }}</span>
+					<span>{{ formattedText(data.title, 80) }}</span>
 					<span class="ml-2" v-if="isLink">
 						<i class="fa-solid fa-arrow-right-long"></i>
 					</span>

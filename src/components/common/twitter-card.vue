@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted, watch } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
+import { formattedText } from '@/utils';
 import { type SocialSchema } from '@/stores/thoughts/schema'
 
 interface Props {
@@ -25,20 +26,20 @@ function nextTweet() {
 /**
  * Pause the carousel when the mouse enters the card.
  */
-function pauseCarousel() {
+const pauseCarousel = () => {
   isPaused.value = true;
   if (intervalId) clearInterval(intervalId);
-}
+};
 
 /**
  * Resume the carousel when the mouse leaves the card.
  */
-function resumeCarousel() {
+const resumeCarousel = () => {
   isPaused.value = false;
   if (props.tweets && props.tweets.length > 1) {
     intervalId = window.setInterval(nextTweet, 4000);
   }
-}
+};
 
 onMounted(() => {
   if (props.tweets && props.tweets.length > 1) {
@@ -61,9 +62,9 @@ onUnmounted(() => {
     <div class="column pt-5">
       <i class="fa-solid fa-quote-left"></i>
     </div>
-    <div class="column">
+    <div class="column tweet">
       <transition name="fade" mode="out-in">
-        <div :key="currentIndex" v-html="tweets[currentIndex].text"></div>
+        <div :key="currentIndex" v-html="formattedText(tweets[currentIndex].text, 300)"></div>
       </transition>
     </div>
     <div class="author column is-flex is-align-items-center is-flex is-align-items-end">
@@ -92,6 +93,9 @@ onUnmounted(() => {
   color: var(--text-color);
   font-size: 16px;
 
+  .tweet {
+    height: 105px;
+  }
   i.fa-solid.fa-quote-left {
     font-size: 24px;
   }
@@ -117,6 +121,9 @@ onUnmounted(() => {
 	}
 
   @media screen and (max-width: 768px) {
+    .tweet {
+      height: 200px;
+    }
     .author {
       .avatar {
         flex: none;
