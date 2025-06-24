@@ -32,3 +32,7 @@ export const getDate = (date: string): string => {
 	};
 	return new Date(date).toLocaleDateString('en-US', options);
 };
+
+export const formattedText = (title: string, charLength: number) => {
+	return title.length > charLength ? title.slice(0, charLength) + '...' : title;
+};
