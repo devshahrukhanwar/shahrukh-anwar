@@ -8,7 +8,7 @@ import {
 	ThemeSwitch,
 	TopNavbar
 } from '@/components';
-import menu from '@/config/nav.json';
+import { nav, socials, profile } from '@/config';
 
 const isDarkMode = ref(true);
 const setTheme = (isDarkTheme: boolean): void => {
@@ -25,7 +25,7 @@ defineExpose({ setTheme });
 		<div class="columns is-flex-desktop is-block-mobile">
 			<div
 				class="column is-one-third profile-section"
-				:class="{ 'is-hidden-mobile': $route.path !== menu.home.path }"
+				:class="{ 'is-hidden-mobile': $route.path !== nav.home.path }"
 			>
 				<Profile />
 			</div>
@@ -51,13 +51,18 @@ defineExpose({ setTheme });
 				</div>
 			</div>
 			<!-- Common Section Ends -->
-			<div
-				class="column is-one-third is-hidden-desktop"
-				:class="{ 'is-hidden-mobile': $route.path === menu.home.path }"
-				v-if="0"
+		</div>
+		<div class="credit-section p-5">
+			Developed by
+			<a
+				target="_blank"
+				rel="noopener noreferrer"
+				class="text-highlight"
+				:href="socials.github.url"
 			>
-				<Profile />
-			</div>
+				{{ profile.name }}
+			</a>
+			<p>Built with Vuejs | Hosted on Vercel</p>
 		</div>
 	</div>
 </template>
@@ -75,6 +80,10 @@ defineExpose({ setTheme });
 	.view {
 		padding-left: 45px;
 	}
+	.credit-section {
+		font-size: 16px;
+		padding-bottom: 0 !important;
+	}
 
 	@media screen and (max-width: 768px) {
 		padding: 7.5rem 2rem 2rem;
@@ -85,6 +94,9 @@ defineExpose({ setTheme });
 		.view {
 			padding-left: 0;
 			padding-right: 0;
+		}
+		.credit-section {
+			font-size: 16px;
 		}
 	}
 }
