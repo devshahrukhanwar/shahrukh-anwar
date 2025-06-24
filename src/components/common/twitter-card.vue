@@ -1,26 +1,48 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted, watch } from 'vue';
-import { type TwitterSchema } from '@/stores/thoughts/schema'
+import { type SocialSchema } from '@/stores/thoughts/schema'
 
 interface Props {
-	user: TwitterSchema['twitter']['user'];
-  tweets: TwitterSchema['twitter']['tweets'];
+	user: SocialSchema['twitter']['user'];
+  tweets: SocialSchema['twitter']['tweets'];
 }
 
 const currentIndex = ref(0);
+const isPaused = ref(false);
 let intervalId: number | undefined;
 
 const props = defineProps<Props>();
 
+/**
+ * Watch for changes in the tweets array and reset the current index if necessary.
+ */
 function nextTweet() {
   if (props.tweets && props.tweets.length > 0) {
     currentIndex.value = (currentIndex.value + 1) % props.tweets.length;
   }
 }
 
+/**
+ * Pause the carousel when the mouse enters the card.
+ */
+function pauseCarousel() {
+  isPaused.value = true;
+  if (intervalId) clearInterval(intervalId);
+}
+
+/**
+ * Resume the carousel when the mouse leaves the card.
+ */
+function resumeCarousel() {
+  isPaused.value = false;
+  if (props.tweets && props.tweets.length > 1) {
+    intervalId = window.setInterval(nextTweet, 4000);
+  }
+}
+
 onMounted(() => {
   if (props.tweets && props.tweets.length > 1) {
-    intervalId = window.setInterval(nextTweet, 4000); // 3 seconds
+    intervalId = window.setInterval(nextTweet, 4000); // 4 seconds
   }
 });
 
@@ -30,7 +52,12 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="twitter-card columns card is-clickable is-block px-3">
+  <div class="twitter-card columns card is-clickable is-block px-3"
+    @mouseenter="pauseCarousel"
+    @mouseleave="resumeCarousel"
+    @touchstart="pauseCarousel"
+    @touchend="resumeCarousel"
+  >
     <div class="column pt-5">
       <i class="fa-solid fa-quote-left"></i>
     </div>

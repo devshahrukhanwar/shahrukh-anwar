@@ -10,6 +10,7 @@
     "format:ci": "prettier src/ --check"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.5.0",
     "axios": "^1.7.9",
     "bulma": "^1.0.3",
     "pinia": "^3.0.3",

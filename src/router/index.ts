@@ -1,9 +1,13 @@
-import { createRouter, createWebHistory } from 'vue-router';
+import {
+	type RouteRecordRaw,
+	createRouter,
+	createWebHistory
+} from 'vue-router';
 
 import { profile } from '@/config';
 import { Contact, Experience, Home, Projects, Thoughts, Tools } from '@/views';
 
-const routes = [
+const routes: RouteRecordRaw[] = [
 	{
 		path: '/',
 		name: 'Home',
@@ -78,7 +82,7 @@ const router = createRouter({
 
 router.beforeEach((to, _, next) => {
 	if (to.meta && to.meta.title) {
-		document.title = `${profile.name} | ${to.name}`;
+		document.title = `${profile.name} | ${String(to.name)}`;
 	} else {
 		document.title = profile.name;
 	}
