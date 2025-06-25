@@ -3,8 +3,7 @@ import { ErrorMessage, Field, Form } from 'vee-validate';
 import { ref } from 'vue';
 import * as yup from 'yup';
 
-import { useNotification } from '@/composables';
-import { type Contact } from '@/notifications';
+import { useNotification, type Contact } from '@/composables';
 
 const { sendNotification } = useNotification();
 
