@@ -1,10 +1,12 @@
 <script setup lang="ts">
 import { ErrorMessage, Field, Form } from 'vee-validate';
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 import * as yup from 'yup';
 
-import { useNotification, type Contact } from '@/composables';
+import { EventName } from '@/events'
+import { useNotification, useAnalytics, useVercel, type Contact } from '@/composables';
 
+const { track } = useAnalytics();
 const { sendNotification } = useNotification();
 
 const btnText = ref('Send');
@@ -24,6 +26,11 @@ const handleSubmit = (
 	{ resetForm: resetForm }: { resetForm: () => void }
 ) => {
 	isSubmitting.value = true;
+	track(EventName.ContactForm, {
+		name: contact.name,
+		email: contact.email,
+		message: contact.message
+	});
 
 	setTimeout(() => {
 		sendNotification(contact)
