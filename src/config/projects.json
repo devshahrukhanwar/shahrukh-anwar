@@ -3,36 +3,69 @@
     "title": "Green Street",
     "subtitle": "Research and Advisory Firm",
     "banner": "https://framerusercontent.com/images/hxgSQmquybiB6mIsV8wyxmKgo.jpeg",
-    "url": "https://greenstreet.com"
+    "url": "https://greenstreet.com",
+    "tags": [
+      "laravel",
+      "vuejs",
+      "mysql",
+      "aws",
+      "docker"
+    ]
   },
   {
     "title": "HelloPeter",
     "subtitle": "Reviews and Ratings Platform",
     "banner": "https://framerusercontent.com/images/W7qK3jBt3YbPVXnLM1pV89rkB8.jpeg",
-    "url": "https://hellopeter.com"
+    "url": "https://hellopeter.com",
+    "tags": [
+      "laravel",
+      "vuejs",
+      "golang",
+      "mysql"
+    ]
   },
   {
     "title": "VoteMix",
     "subtitle": "Ticketing and Voting Platform",
     "banner": "https://framerusercontent.com/images/GQfwMZ7geSwf9Fs1YaG6yIxQabg.jpeg",
-    "url": "https://votemix.com"
+    "url": "https://votemix.com",
+    "tags": [
+      "laravel",
+      "react",
+      "mysql"
+    ]
   },
   {
     "title": "BluHop",
     "subtitle": "Bottle Refill Finder",
     "banner": "https://framerusercontent.com/images/HshRT3i6mRb1LDg0Jyk4WHS5Vyw.jpeg",
-    "url": "https://www.sparxitsolutions.com/project-bluhop"
+    "url": "https://www.sparxitsolutions.com/project-bluhop",
+    "tags": [
+      "laravel",
+      "react native",
+      "mysql"
+    ]
   },
   {
     "title": "Market World",
     "subtitle": "Coupon and Discount Platform",
     "banner": "https://framerusercontent.com/images/PVzVftRIkfAepO5033QydfATg.jpeg",
-    "url": "https://marketworld.online"
+    "url": "https://marketworld.online",
+    "tags": [
+      "laravel",
+      "react",
+      "mysql"
+    ]
   },
   {
     "title": "DandJ",
     "subtitle": "B2B Denim Community",
     "banner": "https://framerusercontent.com/images/0Mi0IWlbWJU3AYT2hGFzEwO4Ku8.png",
-    "url": "https://www.denimsandjeans.in"
+    "url": "https://www.denimsandjeans.in",
+    "tags": [
+      "laravel",
+      "swift",
+      "mysql"
+    ]
   }
 ]

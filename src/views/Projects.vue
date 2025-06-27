@@ -16,9 +16,17 @@ import { projects } from '@/config';
 		<div class="column is-flex-desktop is-flex-wrap-wrap p-0 pl-3">
 			<div class="column is-6 pl-0" v-for="project in projects" :key="project.title">
 				<a :href="project.url" target="_blank" rel="noopener noreferrer">
-					<Card :data="project" :isLink="false" />
+					<Card :data="project" :isLink="true" :tags="true" />
 				</a>
 			</div>
 		</div>
 	</div>
 </template>
+
+<style lang="scss" scoped>
+.projects {
+	::v-deep(.card .subtitle) {
+		margin-bottom: 10px;
+	}
+}
+</style>

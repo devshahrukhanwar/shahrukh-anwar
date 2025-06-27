@@ -3,8 +3,9 @@ import { getDate, formattedText } from '@/utils';
 import { type BlogSchema } from '@/stores/thoughts/schema';
 
 interface Props {
-	data: BlogSchema;
-	isLink?: boolean;
+	data: BlogSchema
+	isLink?: boolean
+	tags?: boolean
 }
 defineProps<Props>();
 </script>
@@ -27,6 +28,9 @@ defineProps<Props>();
 				</div>
 				<div class="subtitle mt-2" v-if="data?.subtitle">{{ data?.subtitle }}</div>
 				<div class="source text-highlight" v-if="data?.source">({{ data?.source }})</div>
+				<div class="tags" v-if="tags">
+					<span class="tag" v-for="tag in data?.tags" :key="tag">{{ tag }}</span>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -51,6 +55,12 @@ defineProps<Props>();
 	.subtitle, .date {
 		color: var(--text-color-grey);
 		font-size: var(--label-font-size);
+	}
+	.tags {
+		.tag {
+			color: var(--text-color);
+			background-color: var(--text-highlight);
+		}
 	}
   .column.banner {
     overflow: hidden;
