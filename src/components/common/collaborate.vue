@@ -19,8 +19,8 @@ const isHovered = ref(false);
 				<span class="text-highlight">collaborate</span>
 			</h2>
 			<p class="text py-2">
-				Unlock the potential of your product with expert design and development
-				services. Let’s collaborate to create user-centered solutions that not
+				Unlock the potential of your product with my design and development
+				expertise. Let’s collaborate to create user-centered solutions that not
 				only meet your goals but also delight your users.
 			</p>
 			<IconWrapper icon="arrow" :tilted="true" :hovered="isHovered" />
