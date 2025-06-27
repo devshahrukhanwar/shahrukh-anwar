@@ -43,7 +43,8 @@ const blogSchema = z.object({
 	title: z.string(),
 	source: z.string().optional(),
 	banner: z.string(),
-	subtitle: z.string().optional()
+	subtitle: z.string().optional(),
+	tags: z.array(z.string()).optional()
 });
 
 export const socialSchema = z.object({
