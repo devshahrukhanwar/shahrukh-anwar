@@ -6,7 +6,7 @@
   "background_color": "#2D2E2F",
   "display": "standalone",
   "description": "Portfolio website of Shahrukh Anwar showcasing projects, experience, and contact details.",
-  "start_url": "/index.html",
+  "start_url": "/",
   "orientation": "portrait-primary",
   "icons": [
     {
