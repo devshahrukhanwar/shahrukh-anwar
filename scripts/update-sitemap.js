@@ -1,8 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-const __dirname = path.resolve(path.dirname(new URL(import.meta.url).pathname).substring(1));
-const sitemapPath = path.join(__dirname, '../public/sitemap.xml');
+const sitemapPath = path.join(process.cwd(), 'public/sitemap.xml');
 const currentDate = new Date().toISOString().split('T')[0];
 
 fs.readFile(sitemapPath, 'utf8', (err, data) => {
