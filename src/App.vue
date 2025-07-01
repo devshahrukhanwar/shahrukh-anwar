@@ -58,9 +58,9 @@ defineExpose({ setTheme });
 				target="_blank"
 				rel="noopener noreferrer"
 				class="text-highlight"
-				:href="socials.github.url"
+				:href="`${socials.github.url}/shahrukh-anwar`"
 			>
-				{{ profile.name }}
+				<span class="has-text-white"><i class="fa-brands fa-github"></i>/</span><span>{{ profile.github }}</span>
 			</a>
 			<p>Built with Vuejs | Hosted on Vercel</p>
 		</div>
