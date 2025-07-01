@@ -58,7 +58,7 @@ defineExpose({ setTheme });
 				target="_blank"
 				rel="noopener noreferrer"
 				class="text-highlight"
-				:href="socials.github.url"
+				:href="`${socials.github.url}/shahrukh-anwar`"
 			>
 				{{ profile.name }}
 			</a>
