@@ -2,7 +2,7 @@
   {
     "title": "Green Street",
     "subtitle": "Research and Advisory Firm",
-    "banner": "https://framerusercontent.com/images/hxgSQmquybiB6mIsV8wyxmKgo.jpeg",
+    "banner": "/projects/greenstreet.png",
     "url": "https://greenstreet.com",
     "tags": [
       "laravel",
@@ -15,7 +15,7 @@
   {
     "title": "HelloPeter",
     "subtitle": "Reviews and Ratings Platform",
-    "banner": "https://framerusercontent.com/images/W7qK3jBt3YbPVXnLM1pV89rkB8.jpeg",
+    "banner": "/projects/hellopeter.png",
     "url": "https://hellopeter.com",
     "tags": [
       "laravel",
@@ -27,7 +27,7 @@
   {
     "title": "VoteMix",
     "subtitle": "Ticketing and Voting Platform",
-    "banner": "https://framerusercontent.com/images/GQfwMZ7geSwf9Fs1YaG6yIxQabg.jpeg",
+    "banner": "/projects/votemix.png",
     "url": "https://votemix.com",
     "tags": [
       "laravel",
@@ -38,7 +38,7 @@
   {
     "title": "BluHop",
     "subtitle": "Bottle Refill Finder",
-    "banner": "https://framerusercontent.com/images/HshRT3i6mRb1LDg0Jyk4WHS5Vyw.jpeg",
+    "banner": "/projects/bluhop.png",
     "url": "https://www.sparxitsolutions.com/project-bluhop",
     "tags": [
       "laravel",
@@ -49,7 +49,7 @@
   {
     "title": "Market World",
     "subtitle": "Coupon and Discount Platform",
-    "banner": "https://framerusercontent.com/images/PVzVftRIkfAepO5033QydfATg.jpeg",
+    "banner": "/projects/marketworld.png",
     "url": "https://marketworld.online",
     "tags": [
       "laravel",
@@ -60,7 +60,7 @@
   {
     "title": "DandJ",
     "subtitle": "B2B Denim Community",
-    "banner": "https://framerusercontent.com/images/0Mi0IWlbWJU3AYT2hGFzEwO4Ku8.png",
+    "banner": "/projects/dandj.png",
     "url": "https://www.denimsandjeans.in",
     "tags": [
       "laravel",
