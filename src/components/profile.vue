@@ -16,7 +16,7 @@ const count = ref(0);
 	<div class="card profile container is-fluid p-6">
 		<div class="info mb-2">
 			<div class="photo">
-				<img src="@/assets/profile.png" alt="profile-photo" />
+				<img src="/photos/profile.png" :alt="profile.name" />
 			</div>
 			<div class="details mt-3">
 				<section class="name">{{ profile.name }}</section>
