@@ -7,7 +7,7 @@
 
 <p align="center">
   <b>Shahrukh Anwar</b><br>
-  <i>Full Stack Developer | 8+ Years Experience | Vue.js & Laravel Specialist</i>
+  Full Stack Developer | 8+ Years Experience | Vue.js & Laravel Specialist
 </p>
 
 <p align="center">
@@ -117,5 +117,5 @@ If you find this project useful, consider supporting me:
 ---
 
 <p align="left">
-  <i>Developed by Shahrukh Anwar | Built with Vue 3 & Vite | Hosted on Vercel</i>
+  Developed by Shahrukh Anwar | Built with Vue 3 & Vite | Hosted on Vercel
 </p>
