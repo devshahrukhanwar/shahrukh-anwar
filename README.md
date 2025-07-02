@@ -18,6 +18,12 @@
   <a href="https://www.linkedin.com/in/devshahrukh">LinkedIn</a>
 </p>
 
+<p align="center">
+  <a href="https://github.com/devshahrukhanwar/api-shahrukh-anwar">
+    <img src="https://img.shields.io/badge/Backend-api--shahrukh--anwar-blue?logo=github" alt="Backend API"/>
+  </a>
+</p>
+
 ---
 
 ## 📝 About
@@ -28,6 +34,14 @@ Hi, I'm **Shahrukh Anwar** — a passionate Full Stack Developer with over 8 yea
 - 🏆 10+ Projects Completed | 9+ Worldwide Clients
 - 💡 Focus: Transforming ideas into beautifully crafted products
 - 🌍 Based in India (GMT+5:30)
+
+---
+
+## 🖥️ Backend API
+
+This repository is frontend-only. For backend features (blog posts, contact form, notifications, etc.), please use the companion API repository:
+
+> **Note:** For full functionality, clone and run the backend API from [api-shahrukh-anwar](https://github.com/devshahrukhanwar/api-shahrukh-anwar) as well.
 
 ---
 
