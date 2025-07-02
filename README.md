@@ -1,5 +1,10 @@
 <h1 align="center">My Developer Portfolio</h1>
 
+<!-- Banner or Logo -->
+<p align="center">
+  <img src="./public/android-chrome-512x512.png" alt="Portfolio Banner" width="10%"/>
+</p>
+
 <p align="center">
   <b>Shahrukh Anwar</b><br>
   <i>Full Stack Developer | 8+ Years Experience | Vue.js & Laravel Specialist</i>
@@ -97,6 +102,17 @@ npm run build
 ## 📄 License
 
 This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+## 💖 Sponsor & Support
+
+If you find this project useful, consider supporting me:
+
+<p align="left">
+  <a href="https://github.com/sponsors/devshahrukhanwar"><img src="https://img.shields.io/badge/Sponsor%20on-GitHub-E4405F?logo=githubsponsors&logoColor=fff&style=flat" alt="Sponsor on GitHub"/></a>
+  <a href="https://www.buymeacoffee.com/devshahrukh"><img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-FFDD00?logo=buymeacoffee&logoColor=000&style=flat" alt="Buy Me a Coffee"/></a>
+</p>
 
 ---
 
