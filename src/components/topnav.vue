@@ -27,7 +27,11 @@ const isHovering = ref({});
 					<i :class="item.icon"></i>
 				</span>
 			</router-link>
-			<Tooltip class="is-hidden-mobile" :content="item.title" v-if="isHovering[item.title]" />
+			<Tooltip
+				class="is-hidden-mobile"
+				:content="item.title"
+				v-if="isHovering[item.title]"
+			/>
 		</div>
 	</nav>
 </template>

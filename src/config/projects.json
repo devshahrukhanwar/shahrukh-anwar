@@ -1,71 +1,44 @@
 [
-  {
-    "title": "Green Street",
-    "subtitle": "Research and Advisory Firm",
-    "banner": "/projects/greenstreet.png",
-    "url": "https://greenstreet.com",
-    "tags": [
-      "laravel",
-      "vuejs",
-      "mysql",
-      "aws",
-      "docker"
-    ]
-  },
-  {
-    "title": "HelloPeter",
-    "subtitle": "Reviews and Ratings Platform",
-    "banner": "/projects/hellopeter.png",
-    "url": "https://hellopeter.com",
-    "tags": [
-      "laravel",
-      "vuejs",
-      "golang",
-      "mysql"
-    ]
-  },
-  {
-    "title": "VoteMix",
-    "subtitle": "Ticketing and Voting Platform",
-    "banner": "/projects/votemix.png",
-    "url": "https://votemix.com",
-    "tags": [
-      "laravel",
-      "react",
-      "mysql"
-    ]
-  },
-  {
-    "title": "BluHop",
-    "subtitle": "Bottle Refill Finder",
-    "banner": "/projects/bluhop.png",
-    "url": "https://www.sparxitsolutions.com/project-bluhop",
-    "tags": [
-      "laravel",
-      "react native",
-      "mysql"
-    ]
-  },
-  {
-    "title": "Market World",
-    "subtitle": "Coupon and Discount Platform",
-    "banner": "/projects/marketworld.png",
-    "url": "https://marketworld.online",
-    "tags": [
-      "laravel",
-      "react",
-      "mysql"
-    ]
-  },
-  {
-    "title": "DandJ",
-    "subtitle": "B2B Denim Community",
-    "banner": "/projects/dandj.png",
-    "url": "https://www.denimsandjeans.in",
-    "tags": [
-      "laravel",
-      "swift",
-      "mysql"
-    ]
-  }
+	{
+		"title": "Green Street",
+		"subtitle": "Research and Advisory Firm",
+		"banner": "/projects/greenstreet.png",
+		"url": "https://greenstreet.com",
+		"tags": ["laravel", "vuejs", "mysql", "aws", "docker"]
+	},
+	{
+		"title": "HelloPeter",
+		"subtitle": "Reviews and Ratings Platform",
+		"banner": "/projects/hellopeter.png",
+		"url": "https://hellopeter.com",
+		"tags": ["laravel", "vuejs", "golang", "mysql"]
+	},
+	{
+		"title": "VoteMix",
+		"subtitle": "Ticketing and Voting Platform",
+		"banner": "/projects/votemix.png",
+		"url": "https://votemix.com",
+		"tags": ["laravel", "react", "mysql"]
+	},
+	{
+		"title": "BluHop",
+		"subtitle": "Bottle Refill Finder",
+		"banner": "/projects/bluhop.png",
+		"url": "https://www.sparxitsolutions.com/project-bluhop",
+		"tags": ["laravel", "react native", "mysql"]
+	},
+	{
+		"title": "Market World",
+		"subtitle": "Coupon and Discount Platform",
+		"banner": "/projects/marketworld.png",
+		"url": "https://marketworld.online",
+		"tags": ["laravel", "react", "mysql"]
+	},
+	{
+		"title": "DandJ",
+		"subtitle": "B2B Denim Community",
+		"banner": "/projects/dandj.png",
+		"url": "https://www.denimsandjeans.in",
+		"tags": ["laravel", "swift", "mysql"]
+	}
 ]

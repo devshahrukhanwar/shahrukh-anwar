@@ -1,8 +1,7 @@
-import { createApp } from 'vue';
-import { createPinia } from 'pinia';
-
 import { inject } from '@vercel/analytics';
 import { injectSpeedInsights } from '@vercel/speed-insights';
+import { createPinia } from 'pinia';
+import { createApp } from 'vue';
 
 import '@/styles/_index.scss';
 
