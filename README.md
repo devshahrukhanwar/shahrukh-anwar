@@ -66,9 +66,9 @@ This repository is frontend-only. For backend features (blog posts, contact form
 - 🧩 Custom components: Cards, FAQ, Social, TwitterCard, etc.
 - 🌐 SEO optimized (OpenGraph, Twitter Cards, Sitemap, Manifest)
 - 🔄 Automated sitemap updates on build
-- ☁️ Deployed on Vercel
+- 🧪 Full test coverage with Vitest
 - 💹 Vercel Analytics & Vercel Performance Insights
-- ☺️ A contact form that always works
+- 📬 A contact form that always works
 
 ---
 
@@ -76,13 +76,17 @@ This repository is frontend-only. For backend features (blog posts, contact form
 
 ```text
 src/
+  assets/       # Static assets (images, fonts)
   components/    # Vue components (Profile, Social, Card, etc.)
-  views/         # Main views (Home, Projects, Tools, Experience, Thoughts, Contact)
+  composables/   # Reusable logic (useFetch, useNotification, etc.)
   config/        # JSON configs (profile, projects, tools, socials, nav, faq, experience)
+  events/        # Event handlers (EventName, AnalyticsEvent)
+  mocks/         # Mock data for development and testing
+  router/        # Vue Router setup
   stores/        # Pinia stores
-  assets/        # Fonts, images
   styles/        # SCSS styles
   utils/         # Utility functions
+  views/         # Main views (Home, Projects, Tools, Experience, Thoughts, Contact)
 public/          # Static assets (icons, banners, manifest, sitemap)
 scripts/         # Build scripts (update-sitemap.js)
 ```
