@@ -1,0 +1,29 @@
+{
+	"blogs": [
+		{
+			"url": "https://example.com/blog1",
+			"date": "2025-07-04",
+			"title": "Example Blog Title",
+			"source": "Example Source",
+			"banner": "banner1.png",
+			"subtitle": "Example subtitle",
+			"tags": ["tag1", "tag2"]
+		}
+	],
+	"twitter": {
+		"user": {
+			"id": "12345",
+			"name": "John Doe",
+			"profile_image_url": "https://example.com/profile.png",
+			"username": "johndoe"
+		},
+		"tweets": [
+			{
+				"author_id": "12345",
+				"created_at": "2025-07-04T12:00:00Z",
+				"id": "tweet123",
+				"text": "This is a sample tweet."
+			}
+		]
+	}
+}

@@ -1,4 +1,5 @@
 {
+  "buildCommand": "npm run test && npm run build",
   "rewrites": [
     {
       "source": "/(.*)",

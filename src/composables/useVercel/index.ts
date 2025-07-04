@@ -2,7 +2,7 @@ import { BeforeSendEvent, track } from '@vercel/analytics';
 
 import { AnalyticsEvent } from '@/events';
 
-import type { AnalyticsService } from './useAnalytics';
+import type { AnalyticsService } from '../useAnalytics';
 
 interface UseVercelComposable extends AnalyticsService<BeforeSendEvent> {}
 

@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import { onMounted } from 'vue';
 import { storeToRefs } from 'pinia';
+import { onMounted } from 'vue';
+
+import { Card, TwitterCard } from '@/components';
 import { socials } from '@/config';
 import { useThoughtsStore } from '@/stores';
-import { Card, TwitterCard } from '@/components';
 
 const thoughtsStore = useThoughtsStore();
 const { socialData } = storeToRefs(thoughtsStore);
@@ -20,22 +21,21 @@ onMounted(async () => {
 		<div class="column has-text-left has-text-centered-mobile pb-5 headline">
 			<p class="heading">
 				My Thoughts<span class="is-hidden-desktop"></span>
-        <br />
-        <span> and </span>
-        <span class="text-highlight">Perspectives</span>
+				<br />
+				<span> and </span>
+				<span class="text-highlight">Perspectives</span>
 			</p>
 		</div>
 		<div>
 			<div class="twitter-section column has-text-left pr-0">
 				<div class="bullets mb-5">
-					<span><span class="text-highlight is-clickable"># </span>My Thoughts</span>
+					<span
+						><span class="text-highlight is-clickable"># </span>My
+						Thoughts</span
+					>
 				</div>
 				<div class="column p-0 pl-3">
-					<a
-						target="_blank"
-						rel="noopener noreferrer"
-						:href="twitterURL"
-					>
+					<a target="_blank" rel="noopener noreferrer" :href="twitterURL">
 						<TwitterCard
 							:tweets="socialData.twitter.tweets"
 							:user="socialData.twitter.user"
@@ -46,14 +46,18 @@ onMounted(async () => {
 			</div>
 			<div class="blog-section column has-text-left mt-5 pr-0">
 				<div class="bullets mb-1">
-					<span><span class="text-highlight is-clickable"># </span>My Blogs</span>
+					<span
+						><span class="text-highlight is-clickable"># </span>My Blogs</span
+					>
 				</div>
 				<div class="column is-flex-desktop is-flex-wrap-wrap p-0">
-					<div class="column is-6 pl-0" v-for="blog in socialData?.blogs" :key="blog.title">
+					<div
+						class="column is-6 pl-0"
+						v-for="blog in socialData?.blogs"
+						:key="blog.title"
+					>
 						<a :href="blog.url" target="_blank" rel="noopener noreferrer">
-							<Card
-								:data="blog"
-							/>
+							<Card :data="blog" />
 						</a>
 					</div>
 				</div>
@@ -87,6 +91,6 @@ onMounted(async () => {
 				padding-right: 0;
 			}
 		}
-  }
+	}
 }
 </style>

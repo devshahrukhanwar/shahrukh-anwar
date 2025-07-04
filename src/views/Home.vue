@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Introduction } from '@/components';
-import { Tools, Projects, Thoughts } from '@/views';
+import { Projects, Thoughts, Tools } from '@/views';
 </script>
 
 <template>
@@ -13,7 +13,6 @@ import { Tools, Projects, Thoughts } from '@/views';
 </template>
 
 <style lang="scss" scoped>
-
 ::v-deep(.tools) {
 	margin-top: 3rem;
 }

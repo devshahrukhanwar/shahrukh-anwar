@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { ErrorMessage, Field, Form } from 'vee-validate';
-import { ref, onMounted } from 'vue';
+import { onMounted, ref } from 'vue';
 import * as yup from 'yup';
 
-import { EventName } from '@/events'
-import { useNotification, useAnalytics, useVercel, type Contact } from '@/composables';
+import { type Contact, useAnalytics, useNotification } from '@/composables';
+import { EventName } from '@/events';
 
 const { track } = useAnalytics();
 const { sendNotification } = useNotification();
@@ -29,7 +29,7 @@ const handleSubmit = (
 	track(EventName.ContactForm, {
 		name: contact.name,
 		email: contact.email,
-		message: contact.message
+		message: contact.message ?? ''
 	});
 
 	setTimeout(() => {
@@ -58,7 +58,7 @@ const handleSubmit = (
 			<p class="heading">
 				Let’s Create <br />Something <span class="text-highlight">Amazing</span>
 			</p>
-	</div>
+		</div>
 		<div class="contact-form card column is-block p-4 mt-5">
 			<Form :validation-schema="schema" @submit="handleSubmit">
 				<div class="field">

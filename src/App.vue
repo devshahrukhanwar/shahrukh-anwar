@@ -8,7 +8,7 @@ import {
 	ThemeSwitch,
 	TopNavbar
 } from '@/components';
-import { nav, socials, profile } from '@/config';
+import { nav, profile, socials } from '@/config';
 
 const isDarkMode = ref(true);
 const setTheme = (isDarkTheme: boolean): void => {
@@ -60,7 +60,8 @@ defineExpose({ setTheme });
 				class="text-highlight"
 				:href="`${socials.github.url}/shahrukh-anwar`"
 			>
-				<span class="has-text-white"><i class="fa-brands fa-github"></i>/</span><span>{{ profile.github }}</span>
+				<span class="has-text-white"><i class="fa-brands fa-github"></i>/</span
+				><span>{{ profile.github }}</span>
 			</a>
 			<p>Built with Vuejs | Hosted on Vercel</p>
 		</div>
