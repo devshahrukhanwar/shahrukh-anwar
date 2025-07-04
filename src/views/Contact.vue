@@ -29,7 +29,7 @@ const handleSubmit = (
 	track(EventName.ContactForm, {
 		name: contact.name,
 		email: contact.email,
-		message: contact.message
+		message: contact.message ?? ''
 	});
 
 	setTimeout(() => {
