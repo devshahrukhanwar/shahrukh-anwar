@@ -76,7 +76,7 @@ This repository is frontend-only. For backend features (blog posts, contact form
 
 ```text
 src/
-  assets/       # Static assets (images, fonts)
+  assets/        # Static assets (images, fonts)
   components/    # Vue components (Profile, Social, Card, etc.)
   composables/   # Reusable logic (useFetch, useNotification, etc.)
   config/        # JSON configs (profile, projects, tools, socials, nav, faq, experience)
