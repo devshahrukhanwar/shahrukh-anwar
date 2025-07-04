@@ -4,7 +4,7 @@ import { ref, onMounted } from 'vue';
 import * as yup from 'yup';
 
 import { EventName } from '@/events'
-import { useNotification, useAnalytics, useVercel, type Contact } from '@/composables';
+import { useNotification, useAnalytics, type Contact } from '@/composables';
 
 const { track } = useAnalytics();
 const { sendNotification } = useNotification();
