@@ -2,7 +2,7 @@
 import { ref } from 'vue';
 
 import { Tooltip } from '@/components';
-import menu from '@/config/nav.json';
+import { nav } from '@/config';
 
 const isHovering = ref({});
 </script>
@@ -12,7 +12,7 @@ const isHovering = ref({});
 		<div
 			class="column is-narrow is-flex is-justify-content-center pr-1 py-0"
 			:key="item.title"
-			v-for="item in menu"
+			v-for="item in nav"
 		>
 			<router-link
 				class="link"
