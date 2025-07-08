@@ -1,0 +1,22 @@
+{
+  "github": {
+    "repositories": [
+      {
+        "url": "https://github.com/devshahrukhanwar/shahrukh-anwar",
+        "banner": "https://opengraph.githubassets.com/1/devshahrukhanwar/shahrukh-anwar"
+      },
+      {
+        "url": "https://github.com/devshahrukhanwar/api-shahrukh-anwar",
+        "banner": "https://opengraph.githubassets.com/1/devshahrukhanwar/api-shahrukh-anwar"
+      },
+      {
+        "url": "https://github.com/devshahrukhanwar/coding-practices",
+        "banner": "https://opengraph.githubassets.com/1/devshahrukhanwar/coding-practices"
+      },
+      {
+        "url": "https://github.com/devshahrukhanwar/croppy-library",
+        "banner": "https://opengraph.githubassets.com/1/devshahrukhanwar/croppy-library"
+      }
+    ]
+  }
+}
