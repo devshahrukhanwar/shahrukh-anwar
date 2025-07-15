@@ -2,43 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.sitemaps.org/schemas/sitemap-image/1.1">
   <url>
     <loc>https://shahrukhanwar.vercel.app</loc>
-    <lastmod>2025-07-08</lastmod>
+    <lastmod>2025-07-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://shahrukhanwar.vercel.app/projects</loc>
-    <lastmod>2025-07-08</lastmod>
+    <lastmod>2025-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://shahrukhanwar.vercel.app/tools</loc>
-    <lastmod>2025-07-08</lastmod>
+    <lastmod>2025-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://shahrukhanwar.vercel.app/experience</loc>
-    <lastmod>2025-07-08</lastmod>
+    <lastmod>2025-07-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://shahrukhanwar.vercel.app/thoughts</loc>
-    <lastmod>2025-07-08</lastmod>
+    <lastmod>2025-07-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://shahrukhanwar.vercel.app/contact</loc>
-    <lastmod>2025-07-08</lastmod>
+    <lastmod>2025-07-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://shahrukhanwar.vercel.app/photos/profile.png</loc>
-    <lastmod>2025-07-08</lastmod>
+    <lastmod>2025-07-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
     <image:image>
@@ -48,7 +48,7 @@
   </url>
   <url>
     <loc>https://shahrukhanwar.vercel.app/banners/og-portfolio.png</loc>
-    <lastmod>2025-07-08</lastmod>
+    <lastmod>2025-07-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
     <image:image>
