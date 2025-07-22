@@ -76,6 +76,9 @@ onMounted(async () => {
 		::v-deep(.card .banner) {
 			height: 170px;
 		}
+		::v-deep(.card .column.has-text-left.py-4) {
+			height: 160px;
+		}
 		::v-deep(.card .banner img) {
 			width: 100%;
 			height: 170px;
