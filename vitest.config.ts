@@ -15,6 +15,7 @@ export default defineConfig({
 		globals: true,
 		setupFiles: ['./vitest.setup.ts'],
 		include: ['src/**/*.spec.ts'],
+		exclude: ['node_modules', 'dist', 'public'],
 		coverage: {
 			reporter: ['text', 'json', 'html']
 		}
