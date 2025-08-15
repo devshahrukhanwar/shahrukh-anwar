@@ -26,6 +26,7 @@ const count = ref(0);
 						profile.address
 					}}</a>
 				</section>
+				<section class="status is-size-6 has-text-weight-bold text-highlight">(Open to Work)</section>
 			</div>
 		</div>
 		<Social />
@@ -68,7 +69,7 @@ const count = ref(0);
 	}
 	.button {
 		padding: 8px 50px;
-		margin-top: 70px;
+		margin-top: 40px;
 		background-color: var(--button-color);
 	}
 
