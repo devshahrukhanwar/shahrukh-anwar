@@ -1,11 +1,28 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 import { Card } from '@/components';
 import { misc, projects } from '@/config';
 import { type GitHubSchema } from '@/stores/misc/schema';
 
 const hoveredRepo = ref<string | null>(null);
 const repositories: GitHubSchema[] = misc.github.repositories;
+
+const preloadImage = (url: string): Promise<string> => {
+  return new Promise((resolve, reject) => {
+		const img = new Image();
+		img.src = url;
+		img.onload = () => resolve(url);
+		img.onerror = reject;
+  });
+};
+
+onMounted(async () => {
+  try {
+		await Promise.allSettled(repositories.map(repo => preloadImage(repo.banner)));
+  } catch {
+    throw Error('Failed to preload images for GitHub repositories');
+  }
+});
 </script>
 
 <template>

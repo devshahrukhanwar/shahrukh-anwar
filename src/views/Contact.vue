@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ErrorMessage, Field, Form } from 'vee-validate';
-import { onMounted, ref } from 'vue';
+import { ref } from 'vue';
 import * as yup from 'yup';
 
 import { type Contact, useAnalytics, useNotification } from '@/composables';

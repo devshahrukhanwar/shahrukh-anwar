@@ -71,7 +71,7 @@ defineExpose({ setTheme });
 <style lang="scss" scoped>
 .portfolio {
 	position: relative;
-	padding: 7.5rem 6rem 3rem;
+	padding: 6.8rem 6rem 3rem;
 
 	.profile-section {
 		top: 0;
