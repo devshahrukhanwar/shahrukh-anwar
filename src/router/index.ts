@@ -5,13 +5,12 @@ import {
 } from 'vue-router';
 
 import { profile } from '@/config';
-import { Contact, Experience, Home, Projects, Thoughts, Tools } from '@/views';
 
 const routes: RouteRecordRaw[] = [
 	{
 		path: '/',
 		name: 'Home',
-		component: Home,
+		component: () => import('@/views/Home.vue'),
 		meta: {
 			title: '',
 			showCollab: true
@@ -20,7 +19,7 @@ const routes: RouteRecordRaw[] = [
 	{
 		path: '/projects',
 		name: 'Projects',
-		component: Projects,
+		component: () => import('@/views/Projects.vue'),
 		meta: {
 			title: 'Projects',
 			showCollab: true
@@ -28,36 +27,26 @@ const routes: RouteRecordRaw[] = [
 	},
 	{
 		path: '/tools',
-		children: [
-			{
-				path: '',
-				name: 'Tools',
-				component: Tools,
-				meta: {
-					title: 'Tools',
-					showCollab: true
-				}
-			}
-		]
+		name: 'Tools',
+		component: () => import('@/views/Tools.vue'),
+		meta: {
+			title: 'Tools',
+			showCollab: true
+		}
 	},
 	{
 		path: '/experience',
-		children: [
-			{
-				path: '',
-				name: 'Experience',
-				component: Experience,
-				meta: {
-					title: 'Experience',
-					showCollab: true
-				}
-			}
-		]
+		name: 'Experience',
+		component: () => import('@/views/Experience.vue'),
+		meta: {
+			title: 'Experience',
+			showCollab: true
+		}
 	},
 	{
 		path: '/thoughts',
 		name: 'Thoughts',
-		component: Thoughts,
+		component: () => import('@/views/Thoughts.vue'),
 		meta: {
 			title: 'Thoughts',
 			showCollab: true
@@ -66,7 +55,7 @@ const routes: RouteRecordRaw[] = [
 	{
 		path: '/contact',
 		name: 'Contact',
-		component: Contact,
+		component: () => import('@/views/Contact.vue'),
 		meta: {
 			title: 'Contact',
 			showCollab: false
