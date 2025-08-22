@@ -1,19 +1,29 @@
 <script lang="ts" setup>
-import { ref } from 'vue';
-
-import {
-	Collaborate,
-	FAQ,
-	Profile,
-	ThemeSwitch,
-	TopNavbar
-} from '@/components';
+import { ref, defineAsyncComponent } from 'vue';
 import { nav, profile, socials } from '@/config';
 
 const isDarkMode = ref(true);
 const setTheme = (isDarkTheme: boolean): void => {
 	isDarkMode.value = isDarkTheme;
 };
+
+/**
+ * This is loaded explcitly, as this is the first thing that should be shown to user
+ */
+import {
+	Profile
+} from '@/components';
+
+
+/**
+ * Rest of the components are loaded asynchronously to improve initial load time
+ * This is done to ensure that the initial load is fast and the user can see the content
+ * This will greatly improve the user experience and reduce the initial load time
+ */
+const FAQ = defineAsyncComponent(() => import('@/components/common/FAQ.vue'));
+const TopNavbar = defineAsyncComponent(() => import('@/components/TopNav.vue'));
+const Collaborate = defineAsyncComponent(() => import('@/components/common/Collaborate.vue'));
+const ThemeSwitch = defineAsyncComponent(() => import('@/components/common/ThemeSwitch.vue'));
 
 defineExpose({ setTheme });
 </script>
