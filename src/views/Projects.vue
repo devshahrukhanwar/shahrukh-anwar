@@ -2,7 +2,7 @@
 import { ref, onMounted } from 'vue';
 import { Card } from '@/components';
 import { misc, projects } from '@/config';
-import { usePreload } from '@/composables';
+import { usePreload } from '@/composables/usePreload';
 import { type GitHubSchema } from '@/stores/misc/schema';
 
 const hoveredRepo = ref<string | null>(null);
