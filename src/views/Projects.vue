@@ -2,19 +2,13 @@
 import { ref, onMounted } from 'vue';
 import { Card } from '@/components';
 import { misc, projects } from '@/config';
+import { usePreload } from '@/composables';
 import { type GitHubSchema } from '@/stores/misc/schema';
 
 const hoveredRepo = ref<string | null>(null);
 const repositories: GitHubSchema[] = misc.github.repositories;
 
-const preloadImage = (url: string): Promise<string> => {
-  return new Promise((resolve, reject) => {
-		const img = new Image();
-		img.src = url;
-		img.onload = () => resolve(url);
-		img.onerror = reject;
-  });
-};
+const { preloadImage } = usePreload();
 
 onMounted(async () => {
   try {
