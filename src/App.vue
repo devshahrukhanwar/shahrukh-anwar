@@ -20,10 +20,10 @@ import {
  * This is done to ensure that the initial load is fast and the user can see the content
  * This will greatly improve the user experience and reduce the initial load time
  */
-const FAQ = defineAsyncComponent(() => import('@/components/common/FAQ.vue'));
-const TopNavbar = defineAsyncComponent(() => import('@/components/TopNav.vue'));
-const Collaborate = defineAsyncComponent(() => import('@/components/common/Collaborate.vue'));
-const ThemeSwitch = defineAsyncComponent(() => import('@/components/common/ThemeSwitch.vue'));
+const FAQ = defineAsyncComponent(() => import('./components/common/faq.vue'));
+const TopNavbar = defineAsyncComponent(() => import('./components/topnav.vue'));
+const Collaborate = defineAsyncComponent(() => import('./components/common/collaborate.vue'));
+const ThemeSwitch = defineAsyncComponent(() => import('./components/common/theme-switch.vue'));
 
 defineExpose({ setTheme });
 </script>
