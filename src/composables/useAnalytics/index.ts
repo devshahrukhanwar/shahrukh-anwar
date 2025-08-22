@@ -1,4 +1,4 @@
-import { useVercel } from '@/composables';
+import { useVercel } from '@/composables/useVercel';
 import { AnalyticsEvent } from '@/events';
 
 interface UseAnalyticsComposable {
