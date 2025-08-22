@@ -5,7 +5,8 @@ import { beforeEach, describe, expect, it, vi } from 'vitest';
 import Home from './Home.vue';
 
 vi.mock('@/composables', () => ({
-	useVercel: () => ({ track: vi.fn() })
+	useVercel: () => ({ track: vi.fn() }),
+	usePreload: () => ({ preloadImage: vi.fn() })
 }));
 
 describe('Home.vue', () => {
