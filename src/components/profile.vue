@@ -26,7 +26,7 @@ const count = ref(0);
 						profile.address
 					}}</a>
 				</section>
-				<section class="status is-size-6 has-text-weight-bold text-highlight">(Open to Work)</section>
+				<section class="status is-size-6 has-text-weight-bold text-highlight" v-if="profile.openToWork">(Open to Work)</section>
 			</div>
 		</div>
 		<Social />

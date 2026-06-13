@@ -4,8 +4,14 @@
 	"projects": 10,
 	"companies": [
 		{
+			"name": "Multivac",
+			"tenure": "Jan 2026 - Present",
+			"url": "https://multivac.com",
+			"details": "Joined as a <b>Senior Software Engineer</b>. Building Human Machine Interfaces and Smart Services for analytics retrieved from machine data from cloud. Actively working with Nest.js, Vue.js, Tailwind CSS, and other technologies to build some of the very interesting products."
+		},
+		{
 			"name": "SenecaGlobal",
-			"tenure": "Jan 2022 - Present",
+			"tenure": "Jan 2022 - Dec 2025",
 			"url": "https://www.senecaglobal.com",
 			"details": "Joined as a <b>Senior Software Engineer</b> with the role of <b>Independent Contributor</b>. Getting my hands dirty with <b>Design Patterns, SOLID Principles, Agile Practices, Microservices</b>, etc. in the projects here."
 		},
